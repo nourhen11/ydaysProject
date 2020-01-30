@@ -28,6 +28,18 @@ module.exports = function(sequelize, DataTypes) {
         model: 'fournisseur',
         key: 'id_fournisseur'
       }
+    },
+    quantite: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false
+    },
+    id_categorie: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      references: {
+        model: 'categorie',
+        key: 'id_categorie'
+      }
     }
   }, {
     tableName: 'produit'
