@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
  const portt=3000
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+
+ const productRoute = require('./routes/product');
+ app.use(productRoute);
+
 
  
 app.listen(portt);
