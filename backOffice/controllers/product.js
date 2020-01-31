@@ -48,3 +48,7 @@ exports.getProductsByIdProvider = (req, res, next) => {
               console.log(err)
             })
 };
+
+exports.testfunction = (req,res) => {
+    res.send('test');
+}
