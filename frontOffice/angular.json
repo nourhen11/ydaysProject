@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "firsttest": {
+    "front": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/firsttest",
+            "outputPath": "dist/front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,18 +24,14 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/css/icon-font.min.css",
-              "src/assets/css/plugins.css",
               "src/assets/css/style.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/vendor/jquery-1.12.4.min.js",
               "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
               "src/assets/js/plugins.js",
-              "src/assets/js/ajax-mail.js",
-              "src/assets/js/main.js"
+              "src/assets/js//main.js"
             ]
           },
           "configurations": {
@@ -72,18 +68,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "firsttest:build"
+            "browserTarget": "front:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "firsttest:build:production"
+              "browserTarget": "front:build:production"
             }
           }
+          
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "firsttest:build"
+            "browserTarget": "front:build"
           }
         },
         "test": {
@@ -100,7 +97,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/vendor/jquery-1.12.4.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/main.js"
+            ]
           }
         },
         "lint": {
@@ -120,19 +121,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "firsttest:serve"
+            "devServerTarget": "front:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "firsttest:serve:production"
+              "devServerTarget": "front:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "firsttest",
+  "defaultProject": "front",
   "cli": {
-    "analytics": "88825683-e0b1-4ca2-95dc-39300bf11e9b"
+    "analytics": "79756262-af5b-4ad2-9c32-655d989bac9e"
   }
 }
