@@ -13,10 +13,12 @@ const app = express()
  const productRoute = require('./routes/product');
  const customerRoute = require('./routes/customer');
  const providerRoute = require('./routes/provider');
+ const categorieRoute = require('./routes/categorie');
 
  app.use(productRoute);
 app.use(customerRoute);
 app.use(providerRoute);
+app.use(categorieRoute);
 
 
 
