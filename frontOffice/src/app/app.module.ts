@@ -9,6 +9,8 @@ import { HomeComponent } from './frontTemplate/home/home.component';
 import { ProductsComponent } from './frontTemplate/products/products.component';
 import { ProductComponent } from './frontTemplate/product/product.component';
 import { SidebarComponent } from './frontTemplate/sidebar/sidebar.component';
+import { LoginComponent } from './fronttemplate/login/login.component';
+import { InscriptionComponent } from './fronttemplate/inscription/inscription.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { SidebarComponent } from './frontTemplate/sidebar/sidebar.component';
     ProductsComponent,
     ProductComponent,
     SidebarComponent,
+    LoginComponent,
+    InscriptionComponent,
   ],
   imports: [
     HttpClientModule,
