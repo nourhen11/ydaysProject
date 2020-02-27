@@ -13,11 +13,10 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     console.log("test");
      this.productservice.getProducts().subscribe(data =>{
-       console.log(data)
        this.products=data
-       console.log('drhdthdtr')
+       console.log(this.products)
      });
-  console.log(this.products)
+ 
   }
 
 
