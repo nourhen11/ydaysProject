@@ -13,9 +13,9 @@ import { InscriptionComponent } from './fronttemplate/inscription/inscription.co
 const routes: Routes = [
   {path:'',component:LayoutComponent,
     children:[
-       {path:'product',component:ProductComponent},
+       {path:'product/:id_produit',component:ProductComponent},
        {path:'products',component:ProductsComponent},
-       {path:'home',component:HomeComponent},
+       {path:'',component:HomeComponent},
        {path:'login',component:LoginComponent},
        {path:'inscription',component:InscriptionComponent}
 
