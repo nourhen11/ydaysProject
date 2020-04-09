@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 require('mongoose-type-email');
+const saltRounds = 10;
 
 const ProviderSchema = new Schema({
     company : {
@@ -38,4 +39,7 @@ const ProviderSchema = new Schema({
     },
     products : [{type: Schema.Types.ObjectId, ref: 'Product'}]
 })
+
+
+
 module.exports = mongoose.model('Provider',ProviderSchema);
