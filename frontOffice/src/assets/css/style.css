@@ -10503,7 +10503,7 @@ img.mfp-img {
   height: 340px;
   width: 1px;
   margin: auto;
-  background-color: #f5d730;
+  background-color: #0E0C28;
   position: relative; }
   @media only screen and (max-width: 767px) {
     .login-reg-vertical-boder {
@@ -10515,7 +10515,7 @@ img.mfp-img {
     bottom: 25px;
     width: 1px;
     content: "";
-    background-color: #f5d730; }
+    background-color: #0E0C28; }
     @media only screen and (max-width: 767px) {
       .login-reg-vertical-boder::before, .login-reg-vertical-boder::after {
         top: 15px;
@@ -10610,9 +10610,9 @@ img.mfp-img {
       padding: 10px 15px;
       width: 150px;
       text-align: center;
-      background-color: #f5d730;
+      background-color: #0E0C28;
       border: none;
-      color: #202020;
+      color: #FFFFFF;
       text-transform: uppercase;
       font-weight: 700; }
 
@@ -10660,8 +10660,8 @@ img.mfp-img {
           width: 42px;
           height: 42px;
           border-radius: 50%;
-          background-color: #f5d730;
-          color: #202020;
+          background-color: #0E0C28;
+          color: #FFFFFF;
           text-align: center;
           line-height: 42px;
           font-size: 18px; }
