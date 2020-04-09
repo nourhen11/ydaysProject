@@ -13,6 +13,7 @@ import { ProfileproviderComponent } from './dashbordadmin/profileprovider/profil
 import { RegisterproviderComponent } from './registerprovider/registerprovider.component';
 import { LoginproviderComponent } from './loginprovider/loginprovider.component';
 import { ProviderslistComponent } from './dashbordadmin/providerslist/providerslist.component';
+import { OrderComponent } from './frontTemplate/order/order.component';
 
 const routes: Routes = [
   {path:'',component:LayoutComponent,
@@ -22,22 +23,23 @@ const routes: Routes = [
        {path:'home',component:HomeComponent},
        {path:'login',component:LoginComponent},
        {path:'inscription',component:InscriptionComponent},
+       {path:'order',component:OrderComponent},
 
     ]
 },
 {path:'dashbord',component:LayoutadminComponent,
    children:[
    {path:'products',component:AdminproductComponent},
-   {path:'profilefournisseur',component:ProfileproviderComponent},
-   {path:'ajouterproduit',component:AddproductComponent},
-   {path:'listefournisseurs',component:ProviderslistComponent},
+   {path:'profileprovider',component:ProfileproviderComponent},
+   {path:'addproduct',component:AddproductComponent},
+   {path:'productlist',component:ProviderslistComponent},
 
 ]
 
 },
-{path:'inscriptionfournisseur',component:RegisterproviderComponent,
+{path:'registerprovider',component:RegisterproviderComponent,
 children:[
-{path:'inscriptionfournisseur',component:RegisterproviderComponent},]},
+{path:'registerprovider',component:RegisterproviderComponent},]},
 
 {path:'loginfournisseur',component:LoginproviderComponent,
 children:[
