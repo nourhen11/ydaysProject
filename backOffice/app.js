@@ -14,11 +14,15 @@ const app = express()
  const customerRoute = require('./routes/customer');
  const providerRoute = require('./routes/provider');
  const categorieRoute = require('./routes/categorie');
+ const adminRoute = require('./routes/admin');
+
 
  app.use(productRoute);
 app.use(customerRoute);
 app.use(providerRoute);
 app.use(categorieRoute);
+app.use('/admin',adminRoute);
+
 
 
 
