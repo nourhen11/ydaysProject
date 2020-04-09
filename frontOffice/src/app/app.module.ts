@@ -11,6 +11,13 @@ import { ProductComponent } from './frontTemplate/product/product.component';
 import { SidebarComponent } from './frontTemplate/sidebar/sidebar.component';
 import { LoginComponent } from './fronttemplate/login/login.component';
 import { InscriptionComponent } from './fronttemplate/inscription/inscription.component';
+import { AdminproductComponent } from './dashbordadmin/adminproduct/adminproduct.component';
+import { LayoutadminComponent } from './dashbordadmin/layoutadmin/layoutadmin.component';
+import { AddproductComponent } from './dashbordadmin/addproduct/addproduct.component';
+import { ProfileproviderComponent } from './dashbordadmin/profileprovider/profileprovider.component';
+import { RegisterproviderComponent } from './registerprovider/registerprovider.component';
+import { LoginproviderComponent } from './loginprovider/loginprovider.component';
+import { ProviderslistComponent } from './dashbordadmin/providerslist/providerslist.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +29,13 @@ import { InscriptionComponent } from './fronttemplate/inscription/inscription.co
     SidebarComponent,
     LoginComponent,
     InscriptionComponent,
+    AdminproductComponent,
+    LayoutadminComponent,
+    AddproductComponent,
+    ProfileproviderComponent,
+    RegisterproviderComponent,
+    LoginproviderComponent,
+    ProviderslistComponent,
   ],
   imports: [
     HttpClientModule,
