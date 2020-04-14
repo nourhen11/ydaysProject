@@ -2126,7 +2126,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 #scrollUp {
   width: 40px;
   height: 40px;
-  background-color: #f5d730;
+  background-color: #95a7ff;
   border: 3px solid #eeeeee;
   color: #202020;
   right: 20px;
@@ -2470,18 +2470,18 @@ img.mfp-img {
       padding: 20px 30px; } }
   .page-banner h1 {
     text-transform: uppercase;
-    font-size: 42px;
-    color: #202020;
+    font-size: 100px;
+    color: #3038ff;
     line-height: 1;
     font-weight: 800;
     margin-bottom: 13px; }
     @media only screen and (min-width: 1200px) and (max-width: 1599px) {
       .page-banner h1 {
-        font-size: 30px;
+        font-size: 40px;
         margin-bottom: 8px; } }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .page-banner h1 {
-        font-size: 24px;
+        font-size: 30px;
         margin-bottom: 8px; } }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .page-banner h1 {
@@ -3480,7 +3480,7 @@ img.mfp-img {
     font-size: 12px;
     font-weight: 600;
     color: #202020;
-    background-color: #f5d730;
+    background-color: #95a7ff;
     display: block;
     overflow: hidden;
     text-align: center;
@@ -3866,7 +3866,7 @@ img.mfp-img {
     .header-advance-search .submit button {
       border-top-right-radius: 50px;
       border-bottom-right-radius: 50px;
-      background-color: #f5d730;
+      background-color: #95a7ff;
       color: #202020;
       border: none;
       width: 70px;
@@ -7040,7 +7040,7 @@ img.mfp-img {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      background-color: #f5d730;
+      background-color: #2a8bfa;
       color: #202020;
       border-radius: 50px;
       display: block;
@@ -7931,7 +7931,7 @@ img.mfp-img {
         width: 100%; }
         .ee-product-list .content .left-content .actions .add-to-cart {
           position: relative;
-          background-color: #f5d730;
+          background-color: #2e98fc;
           color: #202020;
           border-radius: 50px;
           display: block;
@@ -8471,7 +8471,7 @@ img.mfp-img {
       margin-bottom: 33px; }
       .single-product-content .single-product-description .actions .add-to-cart {
         position: relative;
-        background-color: #f5d730;
+        background-color: #95a7ff;
         color: #202020;
         border-radius: 50px;
         display: block;
@@ -9322,8 +9322,8 @@ img.mfp-img {
       font-weight: 700;
       text-transform: uppercase;
       color: #202020;
-      background-color: #f5d730;
-      border-color: #f5d730;
+      background-color: #95a7ff;
+      border-color: #95a7ff;
       width: 140px; }
 
 /*-- Discount Coupon --*/
@@ -9348,8 +9348,8 @@ img.mfp-img {
     font-weight: 700;
     text-transform: uppercase;
     color: #202020;
-    background-color: #f5d730;
-    border-color: #f5d730;
+    background-color: #95a7ff;
+    border-color: #95a7ff;
     width: 140px; }
 
 /*-- Cart Summary --*/
@@ -9432,8 +9432,8 @@ img.mfp-img {
         font-weight: 700;
         text-transform: uppercase;
         color: #202020;
-        background-color: #f5d730;
-        border-color: #f5d730; }
+        background-color: #95a7ff;
+        border-color: #95a7ff; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .cart-summary .cart-summary-button button {
           margin-left: 0;
