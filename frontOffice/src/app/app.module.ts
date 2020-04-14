@@ -19,6 +19,7 @@ import { RegisterproviderComponent } from './registerprovider/registerprovider.c
 import { LoginproviderComponent } from './loginprovider/loginprovider.component';
 import { ProviderslistComponent } from './dashbordadmin/providerslist/providerslist.component';
 import { OrderComponent } from './frontTemplate/order/order.component';
+import { AboutusComponent } from './frontTemplate/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { OrderComponent } from './frontTemplate/order/order.component';
     LoginproviderComponent,
     ProviderslistComponent,
     OrderComponent,
+    AboutusComponent,
   ],
   imports: [
     HttpClientModule,
