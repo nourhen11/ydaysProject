@@ -11,11 +11,56 @@
                     <!-- Register Form -->
                     <form action="#">
                         <div class="row">
-                            <div class="col-12 mb-30"><input type="text" placeholder="Your name here"></div>
-                            <div class="col-12 mb-30"><input type="email" placeholder="Your email here"></div>
-                            <div class="col-12 mb-30"><input type="password" placeholder="Enter passward"></div>
-                            <div class="col-12 mb-30"><input type="password" placeholder="Conform password"></div>
-                            <div class="col-12"><input type="submit" value="register"></div>
+                            <div class="col-12 mb-30"><input type="text" placeholder="Nom du produit"></div>
+                            <div class="col-12 mb-30"><input type="text" placeholder="Référence du produit"></div>
+                            <div class="col-12 mb-30"><input type="text" placeholder="Catégorie du produit"></div>
+   
+                            <div class="col-12 mb-30"><input type="text" placeholder="Prix du produit"></div>
+                            
+                            <div class="row">
+                                <label for="Couleurs">Couleurs</label>
+                              </div>
+                              <div class="container-fluid" style="border: 1px solid silver;height:60px;">
+                               
+                              <div class="row">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                                <label class="custom-control-label" for="defaultInline1">Rouge</label>
+                              </div>
+                              <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline2">
+                                <label class="custom-control-label" for="defaultInline2">Blanc</label>
+                              </div>
+                               <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline3">
+                                <label class="custom-control-label" for="defaultInline3">Bleu</label>
+                              </div>
+                              <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline4">
+                                <label class="custom-control-label" for="defaultInline4">Noir</label>
+                              </div>
+                              <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline5">
+                                <label class="custom-control-label" for="defaultInline5">Doré</label>
+                              </div>
+                              <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="defaultInline6">
+                                <label class="custom-control-label" for="defaultInline6">Argent</label>
+                              </div>
+                            </div>
+                        </div>
+
+                            <div class="row">
+                                <label for="Description">Description</label>
+                                <textarea class="col-12 mb-60" id="Description"  cols="80"  rows="3"></textarea>
+                              </div>
+
+                      
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary">Enregister le produit</button>
+                                      <button type="button" class="btn btn-secondary" data-dismiss="row">Annuler</button>
+                                    </div>
+                                  
                         </div>
                     </form>
                     
@@ -32,16 +77,25 @@
             <div class="col-md-5 col-12 d-flex">
                 
                 <div class="ee-account-image">
-                    <h3>Uploade votre image</h3>
+                    <h3>Images du produit</h3>
                     
-                    <img src="assets/images/account-image-placeholder.jpg" alt="Account Image Placeholder" class="image-placeholder">
-                    
+                    <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
+                                        <div class="account-image-upload">
+                                            <input type="file" name="chooseFile" id="account-image-upload">
+                                            <label class="account-image-label" for="account-image-upload">Choisissez l'image en face</label>
+                                        </div>
+                                        <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
+                                        <div class="account-image-upload">
+                                            <input type="file" name="chooseFile" id="account-image-upload">
+                                            <label class="account-image-label" for="account-image-upload">Choisissez une 2éme image</label>
+                                        </div>
+                    <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
                     <div class="account-image-upload">
                         <input type="file" name="chooseFile" id="account-image-upload">
-                        <label class="account-image-label" for="account-image-upload">Choose your image</label>
+                        <label class="account-image-label" for="account-image-upload">Choisissez une 3éme image</label>
                     </div>
-                    
-                    <p>jpEG 250x250</p>
+
+                  
                     
                 </div>
                 
