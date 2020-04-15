@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 require('mongoose-type-email');
 const saltRounds = 10;
-
+const bcrypt = require('bcrypt')
 const ProviderSchema = new Schema({
     company : {
         type: String,
@@ -40,6 +40,20 @@ const ProviderSchema = new Schema({
     products : [{type: Schema.Types.ObjectId, ref: 'Product'}]
 })
 
-
+ProviderSchema.pre('save', function(next) {
+    if (this.isNew || this.isModified('password')) {
+        const document = this;
+        bcrypt.hash(this.password, saltRounds, function(err, hashedPassword) {
+            if (err) {
+                next(err);
+            } else {
+                document.password = hashedPassword;
+                next();
+            }
+        });
+    } else {
+        next();
+    }
+});
 
 module.exports = mongoose.model('Provider',ProviderSchema);

@@ -22,32 +22,27 @@ const routes: Routes = [
     children:[
        {path:'product',component:ProductComponent},
        {path:'products',component:ProductsComponent},
-       {path:'home',component:HomeComponent},
+       {path:'',component:HomeComponent},
        {path:'login',component:LoginComponent},
        {path:'inscription',component:InscriptionComponent},
        {path:'order',component:OrderComponent},
        {path:'aboutus',component:AboutusComponent},
-
     ]
 },
+
+{path:'registerprovider',component:RegisterproviderComponent},
+{path:'loginprovider',component:LoginproviderComponent},
+
 {path:'dashbord',component:LayoutadminComponent,
    children:[
    {path:'products',component:AdminproductComponent},
    {path:'profileprovider',component:ProfileproviderComponent},
    {path:'addproduct',component:AddproductComponent},
    {path:'productlist',component:ProviderslistComponent},
-
-]
-
+  ] 
 },
-{path:'registerprovider',component:RegisterproviderComponent,
-children:[
-{path:'registerprovider',component:RegisterproviderComponent},]},
 
-{path:'loginfournisseur',component:LoginproviderComponent,
-children:[
-{path:'loginfournisseur',component:LoginproviderComponent},]},
-  ];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

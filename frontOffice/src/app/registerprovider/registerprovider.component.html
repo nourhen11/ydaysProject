@@ -31,36 +31,89 @@
     <!-- ============================================================== -->
     <!-- signup form  -->
     <!-- ============================================================== -->
-    <form class="splash-container">
+    <form class="container registerProviderForm" [formGroup]="registerProviderForm" (ngSubmit)="onSubmit()">
         <div class="card">
             <div class="card-header">
                 <h3 class="mb-1">Formulaire d'inscription pour les fournisseurs</h3>
                 <p>Entrez vos informations s'il vous plait :</p>
             </div>
             <div class="card-body">
+                <div class="row">
+                <div class="col-md-6">
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Nom du fournisseur" autocomplete="off">
+                    <input class="form-control form-control-lg" type="text" placeholder="Nom du fournisseur"  formControlName="firstname" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }">
+                    <div *ngIf="submitted && f.firstname.errors" class="validaterform">
+                        <div *ngIf="f.firstname.errors.required">Veuillez entrer un nom.</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="text"  placeholder="Prenom du fournisseur" formControlName="lastname" [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }">
+                    <div *ngIf="submitted && f.lastname.errors" class="validaterform">
+                        <div *ngIf="f.lastname.errors.required">Veuillez entrer un prenom.</div>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="E-mail" autocomplete="off">
+                    <input class="form-control form-control-lg" type="text"  placeholder="socieré"  formControlName="company" [ngClass]="{ 'is-invalid': submitted && f.company.errors }">
+                    <div *ngIf="submitted && f.company.errors" class="validaterform">
+                        <div *ngIf="f.company.errors.required">Veuillez entrer Votre société.</div>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="pass1" type="password" required="" placeholder="Mot de passe">
+                    <input class="form-control form-control-lg" type="text"  placeholder="Siret"  formControlName="siret" [ngClass]="{ 'is-invalid': submitted && f.siret.errors }">
+                    <div *ngIf="submitted && f.siret.errors" class="validaterform">
+                        <div *ngIf="f.siret.errors.required">Veuillez entrer un siret.</div>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" required="" placeholder="Confirmez le mot de passe">
+                    <input class="form-control form-control-lg" type="text"  placeholder="Adresse"  formControlName="address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }"> 
+                    <div *ngIf="submitted && f.address.errors" class="validaterform">
+                        <div *ngIf="f.address.errors.required">Veuillez entrer une adresse.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="text"  placeholder="Télephone"  formControlName="phone" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+                    <div *ngIf="submitted && f.phone.errors" class="validaterform">
+                        <div *ngIf="f.phone.errors.required">Veuillez entrer un numéro de télephone.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="email" placeholder="E-mail"  formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                    <div *ngIf="submitted && f.email.errors" class="validaterform">
+                        <div *ngIf="f.email.errors.required">Veuillez entrer un email.</div>
+                        <div *ngIf="f.email.errors.email">Veuillez entrer un email valide.</div>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="city" type="city" required="" placeholder="Adresse">
+                    <input class="form-control form-control-lg" type="password" placeholder="Mot de passe"  formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <div *ngIf="submitted && f.password.errors" class="validaterform">
+                        <div *ngIf="f.password.errors.required">Veuillez entrer un mot de passe.</div>
+                        <div *ngIf="f.password.errors.minlength">mot de passe doit etre supérieur a 6 caractére</div>
+                    </div>
                 </div>
-                <div class="form-group pt-2">
-                    <button class="btn btn-block btn-primary" type="submit"> Inscription </button>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="password" placeholder="Confirmez le mot de passe"  formControlName="confirmPassword" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }">
+                    <div *ngIf="submitted && f.confirmPassword.errors" class="validaterform">
+                        <div *ngIf="f.confirmPassword.errors.required">Veuillez saisir un  mot de passe .</div>
+                        <div *ngIf="f.confirmPassword.errors.mustMatch">Veuillez saisir à nouveau votre mot de passe .</div>
+                    </div>
                 </div>
+               
+            </div>
+                
                 <div class="form-group">
                     <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">En créant votre compte de fournisseur, vous acceptez <a href="#">les termes et les conditions</a></span>
+                        <input class="custom-control-input" type="checkbox" formControlName="acceptTerms"><span class="custom-control-label">En créant votre compte de fournisseur, vous acceptez <a href="#">les termes et les conditions</a></span>
                     </label>
-                </div>
+                </div>             
+                
+            </div>
+            <div class="form-group pt-2 w-25">
+                <button class="btn btn-block btn-primary" type="submit"> Inscription </button>
+            </div>
             </div>
             <div class="card-footer bg-white">
                 <p>Vous avez déjà un compte de fournisseur? <a href="#" class="text-secondary">Connectez-vous ici.</a></p>
