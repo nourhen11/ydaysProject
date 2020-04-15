@@ -1,59 +1,4 @@
-<!-- Mini Cart Wrap Start -->                      
-<div class="mini-cart-wrap">
 
-    <!-- Mini Cart Top -->
-    <div class="mini-cart-top">    
-    
-        <button class="close-cart">Close Cart<i class="icofont icofont-close"></i></button>
-        
-    </div>
-
-    <!-- Mini Cart Products -->
-    <ul class="mini-cart-products">
-        <li>
-            <a class="image"><img src="assets/images/product/product-1.png" alt="Product"></a>
-            <div class="content">
-                <a href="single-product.html" class="title">Waxon Note Book Pro 5</a>
-                <span class="price">Price: $295</span>
-                <span class="qty">Qty: 02</span>
-            </div>
-            <button class="remove"><i class="fa fa-trash-o"></i></button>
-        </li>
-        <li>
-            <a class="image"><img src="assets/images/product/product-2.png" alt="Product"></a>
-            <div class="content">
-                <a href="single-product.html" class="title">Aquet Drone D 420</a>
-                <span class="price">Price: $275</span>
-                <span class="qty">Qty: 01</span>
-            </div>
-            <button class="remove"><i class="fa fa-trash-o"></i></button>
-        </li>
-        <li>
-            <a class="image"><img src="assets/images/product/product-3.png" alt="Product"></a>
-            <div class="content">
-                <a href="single-product.html" class="title">Game Station X 22</a>
-                <span class="price">Price: $295</span>
-                <span class="qty">Qty: 01</span>
-            </div>
-            <button class="remove"><i class="fa fa-trash-o"></i></button>
-        </li>
-    </ul>
-
-    <!-- Mini Cart Bottom -->
-    <div class="mini-cart-bottom">    
-    
-        <h4 class="sub-total">Total: <span>$1160</span></h4>
-
-        <div class="button">
-            <a href="checkout.html">CHECK OUT</a>
-        </div>
-        
-    </div>
-
-</div><!-- Mini Cart Wrap End --> 
-
-<!-- Cart Overlay -->
-<div class="cart-overlay"></div>
 
 <!-- Page Banner Section Start -->
 <div class="page-banner-section section">
@@ -102,16 +47,16 @@
 
                             <div class="tab-content">
                                 <div id="single-image-1" class="tab-pane fade show active big-image-slider">
-                                    <div class="big-image"><img src="assets/images/single-product/big-1.png" alt="Big Image"><a href="assets/images/single-product/big-1.png" class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
+                                    <div class="big-image"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Big Image"><a href="assets/images/single-product/big-1.png" class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
                                    
                                 </div>
                               
                             </div>
 
                             <div class="thumb-image-slider nav">
-                                <a class="thumb-image active" data-toggle="tab" href="#single-image-1"><img src="assets/images/single-product/thumb-1.png" alt="Thumbnail Image"></a>
-                                <a class="thumb-image" data-toggle="tab" href="#single-image-2"><img src="assets/images/single-product/thumb-2.png" alt="Thumbnail Image"></a>
-                                <a class="thumb-image" data-toggle="tab" href="#single-image-3"><img src="assets/images/single-product/thumb-3.png" alt="Thumbnail Image"></a>
+                                <a class="thumb-image active" data-toggle="tab" href="#single-image-1"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
+                                <a class="thumb-image" data-toggle="tab" href="#single-image-2"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
+                                <a class="thumb-image" data-toggle="tab" href="#single-image-3"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
                             </div>
 
                         </div>
@@ -127,11 +72,11 @@
                             <div class="head-content">
 
                                 <div class="category-title">
-                                    <a href="#" class="cat">Smartphone</a>
-                                    <h5 class="title">Flex 3310</h5>
+                                    <a href="#" class="cat">{{product.subcategory.name}}</a>
+                                    <h5 class="title">{{product.title}}</h5>
                                 </div>
 
-                                <h5 class="price">$295.00</h5>
+                                <h5 class="price">${{product.price}}.00</h5>
 
                             </div>
 
@@ -154,16 +99,16 @@
                                 <div class="quantity-colors">
 
                                     <div class="quantity">
-                                        <h5>Quantity</h5>
-                                        <div class="pro-qty"><input type="text" value="1"></div>
+                                        <h5>Quantité:</h5>
+                                        <div class="pro-qty"><input type="text" value="{{product.quantity}}"></div>
                                     </div>                            
 
                                     <div class="colors">
-                                        <h5>Color</h5>
+                                        <h5>Couleur:</h5>
                                         <div class="color-options">
-                                            <button style="background-color: #ff502e"></button>
-                                            <button style="background-color: #fff600"></button>
-                                            <button style="background-color: #1b2436"></button>
+                                            <div>{{product.color}}</div>
+                                            
+            
                                         </div>
                                     </div>                            
 

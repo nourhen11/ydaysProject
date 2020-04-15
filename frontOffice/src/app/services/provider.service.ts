@@ -9,6 +9,6 @@ export class ProviderService {
   constructor(private http: HttpClient) { }
 
   getProviders(){
-    return this.http.get('http://localhost:3000/provider');
+    return this.http.get('http://localhost:3000/providers');
   }
 }

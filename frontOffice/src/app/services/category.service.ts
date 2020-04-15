@@ -10,6 +10,6 @@ export class CategoryService {
 
 
   getCategories(){
-    return this.http.get('http://localhost:3000/categorie');
+    return this.http.get('http://localhost:3000/categories');
   }
 }

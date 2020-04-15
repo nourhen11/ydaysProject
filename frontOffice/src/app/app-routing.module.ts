@@ -5,7 +5,7 @@ import { HomeComponent } from './frontTemplate/home/home.component';
 import { ProductsComponent } from './frontTemplate/products/products.component';
 import { ProductComponent } from './frontTemplate/product/product.component';
 import { LoginComponent } from './fronttemplate/login/login.component';
-import { InscriptionComponent } from './fronttemplate/inscription/inscription.component';
+import { InscriptionComponent } from './frontTemplate/register/inscription.component';
 
 
 
@@ -13,11 +13,11 @@ import { InscriptionComponent } from './fronttemplate/inscription/inscription.co
 const routes: Routes = [
   {path:'',component:LayoutComponent,
     children:[
-       {path:'product/:id_produit',component:ProductComponent},
+       {path:'product/:id',component:ProductComponent},
        {path:'products',component:ProductsComponent},
        {path:'',component:HomeComponent},
        {path:'login',component:LoginComponent},
-       {path:'inscription',component:InscriptionComponent}
+       {path:'register',component:InscriptionComponent}
 
     ]
 },

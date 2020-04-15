@@ -151,14 +151,14 @@
                             <!-- Image -->
                             <div class="image">
 
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-1.png" alt="Product Image"></a>
+                                <a href="single-product.html" class="img"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Product Image"></a>
 
                                 <div class="wishlist-compare">
                                     <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
                                     <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
                                 </div>
 
-                                <a routerLink="/product/{{product.id_produit}}" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ADD TO CART</span></a>
+                                <a routerLink="/product/{{product._id}}" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ADD TO CART</span></a>
 
                             </div>
 
@@ -168,15 +168,15 @@
                                 <!-- Category & Title -->
                                 <div class="category-title">
 
-                                    <a href="#" class="cat">Laptop</a>
-                                    <h5 class="title"><a href="single-product.html">{{product.libelle}}</a></h5>
+                                    <a href="#" class="cat">{{product.category.name}}</a>
+                                    <h5 class="title"><a href="single-product.html">{{product.title}}</a></h5>
 
                                 </div>
 
                                 <!-- Price & Ratting -->
                                 <div class="price-ratting">
 
-                                    <h5 class="price">{{product.prix_unitaire}}</h5>
+                                    <h5 class="price">{{product.price}}</h5>
                                     <div class="ratting">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
