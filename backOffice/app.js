@@ -27,10 +27,13 @@ mongoose.connect(DATABASE_URL,
 const User = require('./routes/User');
 const Provider = require('./routes/Provider');
 const Admin = require('./routes/Admin');
+const Index = require('./routes/Index');
 
 app.use('/user',User);
 app.use('/provider',Provider);
 app.use('/admin',Admin);
+app.use(Index)
+
 
 
 
