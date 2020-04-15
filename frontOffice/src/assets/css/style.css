@@ -11184,10 +11184,10 @@ img.mfp-img {
   text-transform: uppercase;
   margin-bottom: 23px; }
   .about-content h1 span {
-    color: #f5d730; }
+    color: #1900ff; }
   @media only screen and (max-width: 767px) {
     .about-content h1 {
-      font-size: 24px;
+      font-size: 40px;
       line-height: 30px; } }
 
 .about-content h4 {

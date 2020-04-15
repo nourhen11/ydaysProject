@@ -15,19 +15,18 @@
                     <ul class="navbar-nav ml-auto navbar-right-top">
                         <li class="nav-item">
                             <div id="custom-search" class="top-search-bar">
-                                <input class="form-control" type="text" placeholder="Search..">
+                                <input class="form-control" type="text" placeholder="Rechercher..">
                             </div>
                         </li>
                         <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/user.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">Utilisateur</h5>
-                                    <span class="status"></span><span class="ml-2">Available</span>
+                                    <h5 class="mb-0 text-white nav-user-name">Utilisateur connecté</h5>
                                 </div>
-                                <a class="dropdown-item" href="#">Account</a>
-                                <a class="dropdown-item" href="#">Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="#">Mon compte</a>
+                                <a class="dropdown-item" href="#">Mes paramètres</a>
+                                <a class="dropdown-item" href="#">Se déconnecter</a>
                             </div>
                         </li>
                     </ul>
@@ -144,46 +143,15 @@
                 <!-- ============================================================== -->
                 <!-- pageheader -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="page-header">
-                            <div class="page-breadcrumb">
-                                <nav class="navbar navbar-expand-md navbar-dark indigo mb-5">
-                                    <!-- SideNav slide-out button -->
-                                    <div class="float-left">
-                                      <a class="white-text button-collapse" href="#!" data-activates="slide-out"><i class="fas fa-bars"></i></a>
-                                    </div>
-                                    <!-- Breadcrumb-->
-                                    <div class="mr-auto">
-                                        <nav aria-label="breadcrumb">
-                                            <ol class="breadcrumb">
-                                              <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                              <li class="breadcrumb-item active" aria-current="page">Library</li>
-                                            </ol>
-                                          </nav>
-                                    </div>
-                                    <form class="form-inline">
-                                      <input class="form-control mr-sm-2" type="text" placeholder="Recherche" aria-label="Recherche">
-                                    </form>
-                                  </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
                 <router-outlet></router-outlet>
                 <div class="footer">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                Copyright © 2020 HighTeckStore .
+                                Copyright © 2020 HighTechStore .
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="text-md-right footer-links d-none d-sm-block">
-                                    <a href="javascript: void(0);">About</a>
-                                    <a href="javascript: void(0);">Support</a>
-                                    <a href="javascript: void(0);">Contact Us</a>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
