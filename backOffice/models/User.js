@@ -26,19 +26,6 @@ const UserSchema = new Schema({
     },
     orders : [{type: Schema.Types.ObjectId, ref: 'Order'}]
 })
-UserSchema.pre('save', function(next) {
-    if (this.isNew || this.isModified('password')) {
-        const document = this;
-        bcrypt.hash(this.password, saltRounds, function(err, hashedPassword) {
-            if (err) {
-                next(err);
-            } else {
-                document.password = hashedPassword;
-                next();
-            }
-        });
-    } else {
-        next();
-    }
-});
+
+
 module.exports = mongoose.model('User',UserSchema);

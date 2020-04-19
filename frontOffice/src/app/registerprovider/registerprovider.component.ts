@@ -26,7 +26,6 @@ export class RegisterproviderComponent implements OnInit {
       phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      image : [''],
       confirmPassword: ['', Validators.required],
       acceptTerms: [false, Validators.requiredTrue]
  }, {

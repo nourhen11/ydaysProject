@@ -106,7 +106,7 @@
                 
                 <div class="form-group">
                     <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox" formControlName="acceptTerms"><span class="custom-control-label">En créant votre compte de fournisseur, vous acceptez <a href="#">les termes et les conditions</a></span>
+                        <input class="custom-control-input" type="checkbox" formControlName="acceptTerms"  [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }"><span class="custom-control-label">En créant votre compte de fournisseur, vous acceptez <a href="#">les termes et les conditions</a></span>
                     </label>
                 </div>             
                 
@@ -116,7 +116,7 @@
             </div>
             </div>
             <div class="card-footer bg-white">
-                <p>Vous avez déjà un compte de fournisseur? <a href="#" class="text-secondary">Connectez-vous ici.</a></p>
+                <p>Vous avez déjà un compte de fournisseur? <a routerLink="loginprovider" class="text-secondary">Connectez-vous ici.</a></p>
             </div>
         </div>
     </form>

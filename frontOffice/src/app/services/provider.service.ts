@@ -11,4 +11,10 @@ export class ProviderService {
   registerProvider(provider){
     return this.http.post('http://localhost:3000/provider/register',provider);
   }
+  loginProvider(provider){
+    return this.http.post('http://localhost:3000/provider/login',provider);
+  }
+  getProvider(id){
+    return this.http.get('http://localhost:3000/provider/'+id)
+  }
 }

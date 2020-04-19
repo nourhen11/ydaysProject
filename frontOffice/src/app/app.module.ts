@@ -23,6 +23,9 @@ import { ProviderslistComponent } from './dashbordadmin/providerslist/providersl
 import { OrderComponent } from './frontTemplate/order/order.component';
 import { AboutusComponent } from './frontTemplate/aboutus/aboutus.component';
 
+import { AuthGuardService } from './services/auth-guard.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +54,9 @@ import { AboutusComponent } from './frontTemplate/aboutus/aboutus.component';
     FormsModule
     
   ],
-  providers: [],
+  providers: [
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
