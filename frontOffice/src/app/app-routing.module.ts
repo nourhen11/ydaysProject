@@ -15,7 +15,7 @@ import { LoginproviderComponent } from './loginprovider/loginprovider.component'
 import { ProviderslistComponent } from './dashbordadmin/providerslist/providerslist.component';
 import { OrderComponent } from './frontTemplate/order/order.component';
 import { AboutusComponent } from './frontTemplate/aboutus/aboutus.component';
-
+import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   {path:'',component:LayoutComponent,
@@ -33,12 +33,13 @@ const routes: Routes = [
 {path:'registerprovider',component:RegisterproviderComponent},
 {path:'loginprovider',component:LoginproviderComponent},
 
-{path:'dashbord',component:LayoutadminComponent,
+ {path:'dashbord',component:LayoutadminComponent ,
+ canActivate: [AuthGuard],
    children:[
    {path:'products',component:AdminproductComponent},
    {path:'profileprovider',component:ProfileproviderComponent},
    {path:'addproduct',component:AddproductComponent},
-   {path:'productlist',component:ProviderslistComponent},
+   {path:'providers',component:ProviderslistComponent},
   ] 
 },
 

@@ -1,21 +1,24 @@
 <!-- Register Section Start -->
-<div class="register-section section mt-90 mb-90">
+<div class="register-section section mt-30 mb-90">
     <div class="container">
-        <div class="row">
-            
+      <form  class="row">
+      
+           
             <!-- Register -->
             <div class="col-md-6 col-12 d-flex">
                 <div class="ee-register">
                     
                     <h3>Ajout de produit </h3>                    
                     <!-- Register Form -->
-                    <form action="#">
+                  
                         <div class="row">
-                            <div class="col-12 mb-30"><input type="text" placeholder="Nom du produit"></div>
                             <div class="col-12 mb-30"><input type="text" placeholder="Référence du produit"></div>
+                            <div class="col-12 mb-30"><input type="text" placeholder="Titre du produit"></div>
                             <div class="col-12 mb-30"><input type="text" placeholder="Catégorie du produit"></div>
    
                             <div class="col-12 mb-30"><input type="text" placeholder="Prix du produit"></div>
+                            <div class="col-12 mb-30"><input type="text" placeholder="Quantité du produit"></div>
+
                             
                             <div class="row">
                                 <label for="Couleurs">Couleurs disponibles</label>
@@ -62,7 +65,7 @@
                                     </div>
                                   
                         </div>
-                    </form>
+                   
                     
                 </div>
             </div>
@@ -79,28 +82,33 @@
                 <div class="ee-account-image">
                     <h3>Images du produit</h3>
                     
+                    <img [src]="img1 || 'assets/images/productimg.jpg'" alt="Account Image Placeholder" class="imgwith" >
+                    <div class="account-image-upload">
+                        <input type="file" name="chooseFile" id="account-image-upload" (change)="selectedFile($event);readURL($event);">
+                        <label class="account-image-label" for="account-image-upload">Choisissez l'image en face</label>
+                    </div>
                     <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
-                                        <div class="account-image-upload">
-                                            <input type="file" name="chooseFile" id="account-image-upload">
-                                            <label class="account-image-label" for="account-image-upload">Choisissez l'image en face</label>
-                                        </div>
-                                        <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
-                                        <div class="account-image-upload">
-                                            <input type="file" name="chooseFile" id="account-image-upload">
-                                            <label class="account-image-label" for="account-image-upload">Choisissez une 2éme image</label>
-                                        </div>
+                    <div class="account-image-upload">
+                        <input type="file" name="chooseFile" id="account-image-upload">
+                        <label class="account-image-label" for="account-image-upload">Choisissez une 2éme image</label>
+                    </div>
                     <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
                     <div class="account-image-upload">
                         <input type="file" name="chooseFile" id="account-image-upload">
                         <label class="account-image-label" for="account-image-upload">Choisissez une 3éme image</label>
                     </div>
-
+                    <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
+                    <div class="account-image-upload">
+                        <input type="file" name="chooseFile" id="account-image-upload">
+                        <label class="account-image-label" for="account-image-upload">Choisissez une 3éme image</label>
+                    </div>
                   
                     
                 </div>
                 
             </div>
-            
-        </div>
+         
+      
+      </form>   
     </div>
 </div><!-- Register Section End -->
