@@ -14,7 +14,8 @@ const addCategory = (req,res,next) => {
 
 const addSubcategory = (req,res,next) => {
     let subcategory={
-        "name" : req.body.name
+        "name" : req.body.name,
+        'category':req.body.category
     }
     Subcategory.create(subcategory,(err,result) =>{
         if(err){  res.status(500).send(err)}

@@ -1,66 +1,60 @@
 <!-- Register Section Start -->
 <div class="register-section section mt-30 mb-90">
     <div class="container">
-      <form  class="row">
+      <form  class="row" [formGroup]="productForm" (ngSubmit)="onSubmit()">
       
            
             <!-- Register -->
             <div class="col-md-6 col-12 d-flex">
-                <div class="ee-register">
+                <div>
                     
                     <h3>Ajout de produit </h3>                    
                     <!-- Register Form -->
                   
                         <div class="row">
-                            <div class="col-12 mb-30"><input type="text" placeholder="Référence du produit"></div>
-                            <div class="col-12 mb-30"><input type="text" placeholder="Titre du produit"></div>
-                            <div class="col-12 mb-30"><input type="text" placeholder="Catégorie du produit"></div>
-   
-                            <div class="col-12 mb-30"><input type="text" placeholder="Prix du produit"></div>
-                            <div class="col-12 mb-30"><input type="text" placeholder="Quantité du produit"></div>
+                            <div class="col-12 mb-30 ">
+                              <input type="text" placeholder="Référence du produit" formControlName="reference">
+                              <div *ngIf="submitted && f.reference.errors" class="validaterform">
+                                <div *ngIf="f.reference.errors.required">Veuillez entrer reference.</div>
+                            </div>
+                            </div>
+                            
+                            <div class="col-12 mb-30"><input type="text" placeholder="Titre du produit" formControlName="title"></div>   
+                            <div class="col-12 mb-30"><input type="text" placeholder="Prix du produit" formControlName="price"></div>
+                            <div class="col-12 mb-30"><input type="text" placeholder="couleur du produit" formControlName="color"></div>
+
+                            <div class="col-12 mb-30"><input type="text" placeholder="Quantité du produit" formControlName="quantity"></div>
+                           <div class="row" style="width: 100%;">
+                            <div class="col-6">
+                              <label style="color:brown;">TOUTES CATÉGORIES</label>
+                              <div *ngFor="let category of categories">
+                                <input type="radio" formControlName="category" [value]="category._id" style="display: -webkit-inline-box;margin-right: 7px;" (change)="getsubCategories($event)">
+                                <label>{{category.name}}</label>
+                            </div>
+                            </div>
+                            <div class="col-6">
+                              <label style="color:brown;">SOUS CATÉGORIES</label>
+                              <div *ngIf="subcategories">
+                              <div *ngFor="let subcategory of subcategories">
+                                <input type="radio" formControlName="subcategory" [value]="subcategory._id" style="display: -webkit-inline-box;margin-right: 7px;">
+                                <label>{{subcategory.name}}</label>
+                            </div>
+                           </div>
+                            </div>
+                          </div>
 
                             
-                            <div class="row">
-                                <label for="Couleurs">Couleurs disponibles</label>
-                              </div>
-                              <div class="container-fluid" style="border: 1px solid silver;height:45px;">
-                               
-                              <div class="row">
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="defaultInline1">
-                                <label class="custom-control-label" for="defaultInline1">Rouge</label>
-                              </div>
-                              <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="defaultInline2">
-                                <label class="custom-control-label" for="defaultInline2">Blanc</label>
-                              </div>
-                               <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="defaultInline3">
-                                <label class="custom-control-label" for="defaultInline3">Bleu</label>
-                              </div>
-                              <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="defaultInline4">
-                                <label class="custom-control-label" for="defaultInline4">Noir</label>
-                              </div>
-                              <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="defaultInline5">
-                                <label class="custom-control-label" for="defaultInline5">Doré</label>
-                              </div>
-                              <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="custom-control-input" id="defaultInline6">
-                                <label class="custom-control-label" for="defaultInline6">Argent</label>
-                              </div>
-                            </div>
-                        </div>
+                          
+                             
 
-                            <div class="row">
+                            <div class="col-12 mb-30">
                                 <label for="Description">Description</label>
-                                <textarea class="col-12 mb-60" id="Description"  cols="80"  rows="3"></textarea>
-                              </div>
+                                <textarea class="col-12" id="Description"  cols="80"  rows="3" formControlName="Description"></textarea>
+                            </div>
 
                       
                                     <div class="modal-footer">
-                                      <button type="button" class="btn btn-primary">Enregister le produit</button>
+                                      <button type="submit" class="btn btn-primary">Enregister le produit</button>
                                       <button type="button" class="btn btn-secondary" data-dismiss="row">Annuler</button>
                                     </div>
                                   
@@ -81,29 +75,13 @@
                 
                 <div class="ee-account-image">
                     <h3>Images du produit</h3>
-                    
-                    <img [src]="img1 || 'assets/images/productimg.jpg'" alt="Account Image Placeholder" class="imgwith" >
                     <div class="account-image-upload">
-                        <input type="file" name="chooseFile" id="account-image-upload" (change)="selectedFile($event);readURL($event);">
-                        <label class="account-image-label" for="account-image-upload">Choisissez l'image en face</label>
-                    </div>
-                    <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
-                    <div class="account-image-upload">
-                        <input type="file" name="chooseFile" id="account-image-upload">
-                        <label class="account-image-label" for="account-image-upload">Choisissez une 2éme image</label>
-                    </div>
-                    <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
-                    <div class="account-image-upload">
-                        <input type="file" name="chooseFile" id="account-image-upload">
-                        <label class="account-image-label" for="account-image-upload">Choisissez une 3éme image</label>
-                    </div>
-                    <img src="assets/images/productimg.jpg" alt="Account Image Placeholder" >
-                    <div class="account-image-upload">
-                        <input type="file" name="chooseFile" id="account-image-upload">
-                        <label class="account-image-label" for="account-image-upload">Choisissez une 3éme image</label>
-                    </div>
-                  
-                    
+                      <input type="file" name="chooseFile" id="account-image-upload"  multiple="" (change)="onFileChange($event)">
+                      <label class="account-image-label" for="account-image-upload">Choisissez l'image en face</label>
+                  </div>
+
+                  <img *ngFor='let url of images'  [src]="url" height="150" width="200px" style="margin: 3px;"> <br/>
+                             
                 </div>
                 
             </div>
