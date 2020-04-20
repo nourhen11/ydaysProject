@@ -1,59 +1,3 @@
-<!-- Mini Cart Wrap Start -->                      
-<div class="mini-cart-wrap">
-
-    <!-- Mini Cart Top -->
-    <div class="mini-cart-top">    
-    
-        <button class="close-cart">Close Cart<i class="icofont icofont-close"></i></button>
-        
-    </div>
-
-    <!-- Mini Cart Products -->
-    <ul class="mini-cart-products">
-        <li>
-            <a class="image"><img src="assets/images/product/product-1.png" alt="Product"></a>
-            <div class="content">
-                <a href="single-product.html" class="title">Waxon Note Book Pro 5</a>
-                <span class="price">Price: $295</span>
-                <span class="qty">Qty: 02</span>
-            </div>
-            <button class="remove"><i class="fa fa-trash-o"></i></button>
-        </li>
-        <li>
-            <a class="image"><img src="assets/images/product/product-2.png" alt="Product"></a>
-            <div class="content">
-                <a href="single-product.html" class="title">Aquet Drone D 420</a>
-                <span class="price">Price: $275</span>
-                <span class="qty">Qty: 01</span>
-            </div>
-            <button class="remove"><i class="fa fa-trash-o"></i></button>
-        </li>
-        <li>
-            <a class="image"><img src="assets/images/product/product-3.png" alt="Product"></a>
-            <div class="content">
-                <a href="single-product.html" class="title">Game Station X 22</a>
-                <span class="price">Price: $295</span>
-                <span class="qty">Qty: 01</span>
-            </div>
-            <button class="remove"><i class="fa fa-trash-o"></i></button>
-        </li>
-    </ul>
-
-    <!-- Mini Cart Bottom -->
-    <div class="mini-cart-bottom">    
-    
-        <h4 class="sub-total">Total: <span>$1160</span></h4>
-
-        <div class="button">
-            <a href="checkout.html">CHECK OUT</a>
-        </div>
-        
-    </div>
-
-</div><!-- Mini Cart Wrap End --> 
-
-<!-- Cart Overlay -->
-<div class="cart-overlay"></div>
 
 <!-- Page Banner Section Start -->
 <div class="page-banner-section section">
@@ -62,11 +6,12 @@
         <!-- Page Banner -->
         <div class="col-lg-4 col-12 order-lg-2 d-flex align-items-center justify-content-center">
             <div class="page-banner">
-                <h1>Détails du produit</h1>
+                <h1>Product Details</h1>
+                <p>similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita</p>
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="#">Page d'accueil</a></li>
-                        <li><a href="#">Détails du produit</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">Product Details</a></li>
                     </ul>
                 </div>
             </div>
@@ -74,12 +19,12 @@
 
         <!-- Banner -->
         <div class="col-lg-4 col-md-6 col-12 order-lg-1">
-            <div class="banner"><a href="#"><img src="assets/images/banner/bannerlogo.png" alt="Banner"></a></div>
+            <div class="banner"><a href="#"><img src="assets/images/banner/banner-15.jpg" alt="Banner"></a></div>
         </div>
 
         <!-- Banner -->
         <div class="col-lg-4 col-md-6 col-12 order-lg-3">
-            <div class="banner"><a href="#"><img src="assets/images/banner/bannerlogo2.png" alt="Banner"></a></div>
+            <div class="banner"><a href="#"><img src="assets/images/banner/banner-14.jpg" alt="Banner"></a></div>
         </div>
 
     </div>
@@ -101,23 +46,16 @@
 
                             <div class="tab-content">
                                 <div id="single-image-1" class="tab-pane fade show active big-image-slider">
-                                  
-                                    <div class="big-image"><img src="assets/images/single-product/description.png" alt="Big Image"><a href="assets/images/single-product/description.png" class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
-                                </div>
-                                <div id="single-image-2" class="tab-pane fade big-image-slider">
-                                    
-                                    <div class="big-image"><img src="assets/images/single-product/description.png" alt="Big Image"><a href="assets/images/single-product/description.png" class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
-                                </div>
-                                <div id="single-image-3" class="tab-pane fade big-image-slider">
+                                    <div class="big-image"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Big Image"><a href="assets/images/single-product/big-1.png" class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
                                    
-                                    <div class="big-image"><img src="assets/images/single-product/description.png" alt="Big Image"><a href="assets/images/single-product/description.png" class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
                                 </div>
+                              
                             </div>
 
                             <div class="thumb-image-slider nav">
-                                <a class="thumb-image active" data-toggle="tab" href="#single-image-1"><img src="assets/images/single-product/thumb-1.png" alt="Thumbnail Image"></a>
-                                <a class="thumb-image" data-toggle="tab" href="#single-image-2"><img src="assets/images/single-product/thumb-2.png" alt="Thumbnail Image"></a>
-                                <a class="thumb-image" data-toggle="tab" href="#single-image-3"><img src="assets/images/single-product/thumb-3.png" alt="Thumbnail Image"></a>
+                                <a class="thumb-image active" data-toggle="tab" href="#single-image-1"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
+                                <a class="thumb-image" data-toggle="tab" href="#single-image-2"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
+                                <a class="thumb-image" data-toggle="tab" href="#single-image-3"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
                             </div>
 
                         </div>
@@ -133,37 +71,41 @@
                             <div class="head-content">
 
                                 <div class="category-title">
-                                    <a href="#" class="cat">Catégorie du produit</a>
-                                    <h5 class="title">Nom du produit</h5>
+                                    <a href="#" class="cat">{{product.subcategory.name}}</a>
+                                    <h5 class="title">{{product.title}}</h5>
                                 </div>
 
-                                <h5 class="price">Prix £</h5>
+                                <h5 class="price">${{product.price}}.00</h5>
 
                             </div>
 
                             <div class="single-product-description">
 
-                        
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
 
-                    
+                               
 
-                                <span class="availability">Disponibilité: <span> en stock</span></span>
+                                <span class="availability">Availability: <span>In Stock</span></span>
 
                                 <div class="quantity-colors">
 
                                     <div class="quantity">
-                                        <h5>Quantité</h5>
-                                        <div class="pro-qty"><input type="text" value="1"></div>
+                                        <h5>Quantité:</h5>
+                                        <div class="pro-qty"><input type="text" value="{{product.quantity}}"></div>
                                     </div>                            
 
                                     <div class="colors">
-                                        <h5>Couleurs</h5>
+                                        <h5>Couleur:</h5>
                                         <div class="color-options">
-                                            <button style="background-color: #afafaf"></button>
-                                            <button style="background-color: #ff0000"></button>
-                                            <button style="background-color: #002570"></button>
-                                            <button style="background-color: #000000"></button>
-                                            <button style="background-color: #ffbf00"></button>
+                                            <div>{{product.color}}</div>
+                                            
+            
                                         </div>
                                     </div>                            
 
@@ -172,16 +114,16 @@
 
                                 <div class="actions">
 
-                                    <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>Ajouter</span></a>
+                                    <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ADD TO CART</span></a>
 
-                            
+                                    <div class="wishlist-compare">
+                                        <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
+                                        <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                    </div>
 
                                 </div>
 
-                        
-
-                
-
+                              
                             </div>
 
                         </div>
@@ -196,6 +138,8 @@
 
                         <ul class="single-product-tab-list nav">
                             <li><a href="#product-description" class="active" data-toggle="tab" >description</a></li>
+                            <li><a href="#product-specifications" data-toggle="tab" >specifications</a></li>
+                            <li><a href="#product-reviews" data-toggle="tab" >reviews</a></li>
                         </ul>
 
                         <div class="single-product-tab-content tab-content">
@@ -203,16 +147,31 @@
 
                                 <div class="row">
                                     <div class="single-product-description-content col-lg-8 col-12">
-                                        <h4>Description</h4>
-                                        <p>description du produit en question</p>
-                                       </div>
-   
+                                        
+                                    </div>
+                                    
                                 </div>
 
                             </div>
-                              
+                            <div class="tab-pane fade" id="product-specifications">
+                                <div class="single-product-specification">
+                                    <ul>
+                                        <li>Full HD Camcorder</li>
+                                        <li>Dual Video Recording</li>
+                                        <li>X type battery operation</li>
+                                        <li>Full HD Camcorder</li>
+                                        <li>Dual Video Recording</li>
+                                        <li>X type battery operation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="product-reviews">
 
-                            
+                                <div class="product-ratting-wrap">
+                                    
+                                </div>
+
+                            </div>
                         </div>
 
                     </div>

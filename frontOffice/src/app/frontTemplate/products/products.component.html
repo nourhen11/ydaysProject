@@ -82,22 +82,23 @@
                 </div>
                 
                 <!-- Shop Product Wrap Start -->
-                <!-- Shop Product Wrap Start -->
                 <div class="shop-product-wrap grid with-sidebar row">
                     
-                    <div class="col-xl-4 col-md-6 col-12 pb-30 pt-10">
-                       
+                    <div class="col-xl-4 col-md-6 col-12 pb-30 pt-10" *ngFor="let product of products">                      
                         <!-- Product Start -->
                         <div class="ee-product">
 
                             <!-- Image -->
                             <div class="image">
 
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-1.png" alt="Product Image"></a>
+                                <a href="single-product.html" class="img"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Product Image"></a>
 
-                        
+                                <div class="wishlist-compare">
+                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
+                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                </div>
 
-                                <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ajouter</span></a>
+                                <a routerLink="/product/{{product._id}}" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ADD TO CART</span></a>
 
                             </div>
 
@@ -107,226 +108,33 @@
                                 <!-- Category & Title -->
                                 <div class="category-title">
 
-                                    <a href="#" class="cat">Laptop</a>
-                                    <h5 class="title"><a href="single-product.html">Zeon Zen 4 Pro</a></h5>
+                                    <a href="#" class="cat">{{product.category.name}}</a>
+                                    <h5 class="title"><a href="single-product.html">{{product.title}}</a></h5>
 
                                 </div>
 
                                 <!-- Price & Ratting -->
                                 <div class="price-ratting">
 
-                                    <h5 class="price">$580.00</h5>
-                                   
+                                    <h5 class="price">{{product.price}}</h5>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
 
                                 </div>
 
                             </div>
 
-                        </div><!-- Product End -->
-                        
-                        
+                        </div><!-- Product End -->                       
                     </div>
 
-                    <div class="col-xl-4 col-md-6 col-12 pb-30 pt-10">
-                        <!-- Product Start -->
-                        <div class="ee-product">
-
-                            <!-- Image -->
-                            <div class="image">
-
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-1.png" alt="Product Image"></a>
-
-                        
-
-                                <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ajouter</span></a>
-
-                            </div>
-
-                            <!-- Content -->
-                            <div class="content">
-
-                                <!-- Category & Title -->
-                                <div class="category-title">
-
-                                    <a href="#" class="cat">Laptop</a>
-                                    <h5 class="title"><a href="single-product.html">Zeon Zen 4 Pro</a></h5>
-
-                                </div>
-
-                                <!-- Price & Ratting -->
-                                <div class="price-ratting">
-
-                                    <h5 class="price">$580.00</h5>
-                                   
-
-                                </div>
-
-                            </div>
-
-                        </div><!-- Product List End -->
-                    </div>
-
-                    <div class="col-xl-4 col-md-6 col-12 pb-30 pt-10">
-                        <!-- Product Start -->
-                        <div class="ee-product">
-
-                            <!-- Image -->
-                            <div class="image">
-
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-1.png" alt="Product Image"></a>
-
-                        
-
-                                <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ajouter</span></a>
-
-                            </div>
-
-                            <!-- Content -->
-                            <div class="content">
-
-                                <!-- Category & Title -->
-                                <div class="category-title">
-
-                                    <a href="#" class="cat">Laptop</a>
-                                    <h5 class="title"><a href="single-product.html">Zeon Zen 4 Pro</a></h5>
-
-                                </div>
-
-                                <!-- Price & Ratting -->
-                                <div class="price-ratting">
-
-                                    <h5 class="price">$580.00</h5>
-                                   
-
-                                </div>
-
-                            </div>
-
-                        </div><!-- Product List End -->
-                    </div>
-
-                    <div class="col-xl-4 col-md-6 col-12 pb-30 pt-10">
-                        <!-- Product Start -->
-                        <div class="ee-product">
-
-                            <!-- Image -->
-                            <div class="image">
-
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-1.png" alt="Product Image"></a>
-
-                        
-
-                                <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ajouter</span></a>
-
-                            </div>
-
-                            <!-- Content -->
-                            <div class="content">
-
-                                <!-- Category & Title -->
-                                <div class="category-title">
-
-                                    <a href="#" class="cat">Laptop</a>
-                                    <h5 class="title"><a href="single-product.html">Zeon Zen 4 Pro</a></h5>
-
-                                </div>
-
-                                <!-- Price & Ratting -->
-                                <div class="price-ratting">
-
-                                    <h5 class="price">$580.00</h5>
-                                   
-
-                                </div>
-
-                            </div>
-
-                        </div><!-- Product List End -->
-                    </div>
-
-                    <div class="col-xl-4 col-md-6 col-12 pb-30 pt-10">
-                        <!-- Product Start -->
-                        <div class="ee-product">
-
-                            <!-- Image -->
-                            <div class="image">
-
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-1.png" alt="Product Image"></a>
-
-                        
-
-                                <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ajouter</span></a>
-
-                            </div>
-
-                            <!-- Content -->
-                            <div class="content">
-
-                                <!-- Category & Title -->
-                                <div class="category-title">
-
-                                    <a href="#" class="cat">Laptop</a>
-                                    <h5 class="title"><a href="single-product.html">Zeon Zen 4 Pro</a></h5>
-
-                                </div>
-
-                                <!-- Price & Ratting -->
-                                <div class="price-ratting">
-
-                                    <h5 class="price">$580.00</h5>
-                                   
-
-                                </div>
-
-                            </div>
-
-                        </div><!-- Product List End -->
-                    </div>
-                            
-                    <div class="col-xl-4 col-md-6 col-12 pb-30 pt-10">
-                        <!-- Product Start -->
-                        <div class="ee-product">
-
-                            <!-- Image -->
-                            <div class="image">
-
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-1.png" alt="Product Image"></a>
-
-                        
-
-                                <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ajouter</span></a>
-
-                            </div>
-
-                            <!-- Content -->
-                            <div class="content">
-
-                                <!-- Category & Title -->
-                                <div class="category-title">
-
-                                    <a href="#" class="cat">Laptop</a>
-                                    <h5 class="title"><a href="single-product.html">Zeon Zen 4 Pro</a></h5>
-
-                                </div>
-
-                                <!-- Price & Ratting -->
-                                <div class="price-ratting">
-
-                                    <h5 class="price">$580.00</h5>
-                                   
-
-                                </div>
-
-                            </div>
-
-                        </div><!-- Product List End -->
-                    </div>
-
-                    
-
-                   
-                    
+                  
                 </div><!-- Shop Product Wrap End -->
+                
                 
                 <div class="row mt-30">
                     <div class="col">
