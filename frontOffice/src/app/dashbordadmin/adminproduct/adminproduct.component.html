@@ -1,43 +1,42 @@
 <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
-  <div class="card">
-      <h5 class="card-header">Liste des produits</h5>
-      <div class="card-body p-0">
-          <div class="table-responsive">
-              <table class="table">
-                  <thead class="bg-light">
-                      <tr class="border-0">
-                          <th class="border-0">#</th>
-                          <th class="border-0">Image</th>
-                          <th class="border-0">Nom de produit</th>
-                          <th class="border-0">Référence</th>
-                          <th class="border-0">Couleur</th>
-                          <th class="border-0">Prix</th>
-                          <th class="border-0">Statut</th>
-                          <th class="border-0"></th>
-                          <th class="border-0"></th>
-
-
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>1</td>
-                          <td>
-                              <div class="m-r-10"><img src="assets/images/productimg.jpg" alt="user" class="rounded" width="45"></div>
-                          </td>
-                          <td>Product #1 </td>
-                          <td>id000001 </td>
-                          <td>20</td>
-                          <td>$80.00</td>
-                          <td><span class="badge-dot badge-brand mr-1"></span>En stock </td>
-                          <td colspan="4"><a href="#" class="btn btn-outline-light float-right">Voir les détails</a></td>
-
-                      </tr>
-                     
-                     
-                  </tbody>
-              </table>
-          </div>
-      </div>
+    <div class="card">
+        <h5 class="card-header">Liste des produits</h5>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="bg-light">
+                        <tr class="border-0">
+                            <th class="border-0">#</th>
+                            <th class="border-0">Image</th>
+                            <th class="border-0">Nom de produit</th>
+                            <th class="border-0">Référence</th>
+                            <th class="border-0">Couleur</th>
+                            <th class="border-0">Prix</th>
+                            <th class="border-0">Statut</th>
+                            <th class="border-0"></th>
+                            <th class="border-0"></th>
+  
+  
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of products">
+                            <td>1</td>
+                            <td>{{product.images}}
+                            </td>
+                            <td>{{product.title}} </td>
+                            <td>id{{product.reference}} </td>
+                            <td>{{product.color}}</td>
+                            <td>{{product.price}}€</td>
+                            <td><span class="badge-dot badge-brand mr-1"></span>En stock </td>
+                            <td colspan="4"><a href="#" class="btn btn-outline-light float-right">Voir les détails</a></td>
+  
+                        </tr>
+                       
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
   </div>
-</div>

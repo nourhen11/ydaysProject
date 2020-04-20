@@ -24,6 +24,8 @@ export class ProviderService {
     return this.http.get('http://localhost:3000/categories')
   }
   getSubcategories(id_category){
-    return this.http.get('http://localhost:3000/subcategories/'+id_category)
+    return this.http.get('http://localhost:3000/subcategories/'+id_category)}
+  getProviders(){
+    return this.http.get('http://localhost:3000/provider/allproviders');
   }
 }

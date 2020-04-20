@@ -3,7 +3,7 @@ const router = express.Router();
 const Provider = require('../controllers/Provider')
 
 
-
+router.get('/allproviders',Provider.getProviderss);
 router.get('/:id',Provider.getProviderById)
 router.post('/register',Provider.register);
 router.post('/login',Provider.login);

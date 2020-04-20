@@ -67,10 +67,16 @@ const addProduct = (req,res,next) => {
         })    
     })
 }
+
+const getProviderss =(req,res,next)=>{
+    Provider.find((err,result) => {
+        res.status(200).json(result)
+    }) }
 module.exports = {
  
     register,
     login,
     addProduct,
-    getProviderById
+    getProviderById,
+    getProviderss,
 }
