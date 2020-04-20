@@ -6,14 +6,11 @@ const Subcategory = require('../models/Subcategory')
 
 
 const register = (req,res,next) =>{
-  const user=  { firstname, lastname, email, password,image } = req.body;
-    user.save(function(err) {
-        if (err) { 
-            res.status(500).send("Error registering new user please try again.");
-        } else {
-            res.status(200).send("Welcome to the club!");
-        }
-    })
+  const user=  { firstname, lastname, email, password } = req.body;
+  User.create(user,(err,result) =>{
+    if(err){  res.status(500).send(err)}
+   return  res.status(200).json({message:"succefly added"})
+  })
 }
 const login = (req,res,next) => {
   res.send('helo')

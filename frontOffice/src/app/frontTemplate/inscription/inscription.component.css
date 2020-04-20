@@ -1,0 +1,8 @@
+.is-invalid{
+    border-color: red;
+}
+.invalid-label{
+    color: red;
+    margin-left: 12px;
+    font-size: 13px;
+}
