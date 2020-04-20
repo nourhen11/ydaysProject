@@ -2,6 +2,7 @@ const User = require('../models/User')
 const Product = require('../models/Product')
 const Category = require('../models/Category')
 const Provider = require('../models/Provider')
+const Subcategory = require('../models/Subcategory')
 
 
 const register = (req,res,next) =>{
@@ -60,6 +61,12 @@ const getCategories = (req,res,next) => {
     res.status(200).send(result)
   })
 }
+const getSubcategories = (req,res,next) =>{
+  console.log(req.params.id)
+  Category.findOne({_id:req.params.id}).select('sub_categories').populate({'path':'sub_categories','select':'name'}).exec((err,result)=>{
+    res.status(200).json(result.sub_categories)
+  })
+}
 const getProviders = (req,res,next) => {
   Provider.find().select('company').exec((err,result) => {
     res.status(200).send(result)
@@ -73,6 +80,7 @@ module.exports = {
     getProducts,
     getProductById,
     getCategories,
-    getProviders
+    getProviders,
+    getSubcategories
 
 } 

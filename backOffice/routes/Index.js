@@ -21,6 +21,7 @@ router.post('/login',Index.login)
 
 router.get('/products',Index.getProducts)
 router.get('/categories',Index.getCategories)
+router.get('/subcategories/:id',Index.getSubcategories)
 router.get('/providers',Index.getProviders)
 router.get('/products/:id',Index.getProductById)
 router.get('/image/:name', upload.single('user_image'),async (req, res) => {

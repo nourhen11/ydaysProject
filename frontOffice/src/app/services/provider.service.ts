@@ -17,4 +17,13 @@ export class ProviderService {
   getProvider(id){
     return this.http.get('http://localhost:3000/provider/'+id)
   }
+  uploadfiles(files){
+    return this.http.post('http://localhost:3000/multipleFiles',files)
+  }
+  getCategories(){
+    return this.http.get('http://localhost:3000/categories')
+  }
+  getSubcategories(id_category){
+    return this.http.get('http://localhost:3000/subcategories/'+id_category)
+  }
 }

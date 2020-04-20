@@ -1,3 +1,10 @@
 .imgwith{
-    width: 202px;
+    width: 128px;
+}
+.validaterform{
+    color: red;
+    font-size: 12px;  
+}
+.is-invalid{
+    border-color: red;
 }
