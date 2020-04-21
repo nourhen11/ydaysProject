@@ -13,6 +13,8 @@ import{MustMatch} from './must-match.validator'
 export class InscriptionComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
+  imageSrc: string;
+  fileSource:any
 
   constructor(private fb: FormBuilder,private authservice : AuthService,private router:Router) { }
 
@@ -23,11 +25,28 @@ export class InscriptionComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],    
+      file : ['']
   }, {
     validator: MustMatch('password', 'confirmPassword')
   });
   }
   get f() { return this.registerForm.controls; }
+  onFileChange(event) {
+    const reader = new FileReader();
+    
+    if(event.target.files && event.target.files.length) {
+      this.fileSource= event.target.files[0];
+      const [file] = event.target.files; 
+      reader.readAsDataURL(file);
+    
+      reader.onload = () => {
+   
+        this.imageSrc = reader.result as string;   
+        
+      };
+   
+    }
+  }
   onSubmit() {
     this.submitted = true;
    // stop here if form is invalid
@@ -42,6 +61,6 @@ export class InscriptionComponent implements OnInit {
       
       }
      })
-  }
-
+    }
+    
 }

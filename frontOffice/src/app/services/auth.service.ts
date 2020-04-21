@@ -15,4 +15,7 @@ export class AuthService {
   login(user){
     return this.http.post('http://localhost:3000/login',user);
   }
+  uploadFile(file){
+    return this.http.post('http://localhost:3000/file',file);
+  }
 }

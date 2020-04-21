@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 require('mongoose-type-email');
+const bcrypt = require('bcrypt-nodejs')
 
 const UserSchema = new Schema({
    
@@ -26,6 +27,10 @@ const UserSchema = new Schema({
     },
     orders : [{type: Schema.Types.ObjectId, ref: 'Order'}]
 })
-
+UserSchema.pre('save', function () {
+    if (this.isNew || this.isModified('password')) {
+     this.password = bcrypt.hashSync(this.password);
+    }
+});
 
 module.exports = mongoose.model('User',UserSchema);

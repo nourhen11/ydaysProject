@@ -12,8 +12,15 @@ export class ProductService {
     return this.http.get('http://localhost:3000/products');
   }
   getProduct(id){
-  
-   return this.http.get('http://localhost:3000/products/'+id);
+    return this.http.get('http://localhost:3000/products/'+id);
  }
+
+ getCategories(){ 
+  return this.http.get('http://localhost:3000/categories');
+}
+getProviders(){ 
+  return this.http.get('http://localhost:3000/providers');
+}
+
 }
 

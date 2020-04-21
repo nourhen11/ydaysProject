@@ -3,7 +3,8 @@ const Product = require('../models/Product')
 const Category = require('../models/Category')
 const Provider = require('../models/Provider')
 const Subcategory = require('../models/Subcategory')
-
+var jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt-nodejs');
 
 const register = (req,res,next) =>{
   const user=  { firstname, lastname, email, password } = req.body;
@@ -13,11 +14,26 @@ const register = (req,res,next) =>{
   })
 }
 const login = (req,res,next) => {
-  res.send('helo')
+  User.findOne({ email: req.body.email },(err,user)=>{
+    if(err){res.status(500).json({err})}
+    if (!user) {
+        return res.status(401).json({ error: 'Utilisateur non trouvé !' });
+      }
+      bcrypt.compare(req.body.password, user.password,(err,valid)=>{
+        if(err){res.status(500).json({err})}
+        if (!valid) {
+            return res.status(401).json({ error: 'Mot de passe incorrect !' });
+          }
+          res.status(200).json({
+            token: jwt.sign({ userId: user._id },'RANDOM_TOKEN_SECRET', { expiresIn: '24h' })
+         ,role:'user' });
+      })
+
+})    
 }
 const addFile =(req, res, next) => {
     const file = req.file;
-    console.log(file.filename);
+    console.log(file);
     if (!file) {
       const error = new Error('No File')
       error.httpStatusCode = 400
