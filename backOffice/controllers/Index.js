@@ -70,7 +70,7 @@ const getProductById = (req,res,next) => {
 }
 
 const getCategories = (req,res,next) => {
-  Category.find().select('name').exec((err,result) => {
+  Category.find().select('name').select('sub_categories').populate({ path: 'sub_categories', select: 'name' }).exec((err,result) => {
     res.status(200).send(result)
   })
 }

@@ -19,14 +19,7 @@
                       
                       <form action="#">
                           <div class="input"><input type="text" placeholder="Quest-ce que vous recherchez."></div>
-                          <div class="select">
-                              <select class="nice-select">
-                                  <option>Tout</option>
-                                  <option>Laptop</option>
-                                  <option>Smartphones</option>
-                                  <option>Cameras</option>
-                              </select>
-                          </div>
+    
                           <div class="submit"><button><i class="icofont icofont-search-alt-1"></i></button></div>
                       </form>
                       
@@ -69,7 +62,12 @@
                               <li class="active"><a href="#">Acceuil</a></li>
                               <li class="menu-item-has-children"><a href="#">Liste de Produits</a>
                                   <ul class="sub-menu">
-                                      <li><a href="#">Liste des fournisseurs</a></li>
+                                    <li class="menu-item-has-children" *ngFor="let category of categories"><a href="shop-grid.html">{{category.name}}</a>
+                                        <ul class="sub-menu">
+                                            <li *ngFor="let subcategory of category.sub_categories"><a href="shop-grid.html">{{subcategory.name}}</a></li>
+                                        </ul>
+                                    </li>
+                                    
                                   </ul>
                               </li>
                                 <li class="menu-item-has-children"><a routerLink="/aboutus">A propos</a>
