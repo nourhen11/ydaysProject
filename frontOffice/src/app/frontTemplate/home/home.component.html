@@ -73,7 +73,7 @@
             <div class="col-12">
                 <div class="row">
                     
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 pb-30 pt-10" *ngFor="let p of products">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 pb-30 pt-10" *ngFor="let product of products">
                         <!-- Product Start -->
                         <div class="ee-product">
 
@@ -81,9 +81,8 @@
                             <div class="image" >
 
 
-                                <img [src]="p.image" alt="image" (click)="selectProduct(p.id)" >                            
-
-                                <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>Ajouter</span></a>
+                                <a href="single-product.html" class="img"><img src="http://localhost:3000/image/{{product.images[0]}}" alt="Product Image"></a>
+                                <a routerLink="/product/{{product._id}}" href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>Ajouter</span></a>
 
                             </div>
 
@@ -91,16 +90,16 @@
                             <div class="content">
 
                                 <!-- Category & Title -->
-                                <div class="category-title" (click)="selectProduct(p.id)">
-
-                                    <h5 class="title">{{p.title| titlecase}}</h5>
+                                <div class="category-title" >
+                                    <a href="#" class="cat">{{product.category.name}}</a>
+                                    <h5 class="title">{{product.title| titlecase}}</h5>
 
                                 </div>
 
                                 <!-- Price & Ratting -->
                                 <div class="price-ratting">
 
-                                    <h5 class="price"><span class="old">$360 </span>${{p.price}}.00</h5>
+                                    <h5 class="price">{{product.price}}.00€</h5>
                                    
 
                                 </div>
