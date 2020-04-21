@@ -9,10 +9,20 @@
                     
                     <h3>Connexion: </h3>
                     <!-- Login Form -->
-                    <form action="#">
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                         <div class="row">
-                            <div class="col-12 mb-30"><input type="text" placeholder="Type your username or email address"></div>
-                            <div class="col-12 mb-20"><input type="password" placeholder="Enter your passward"></div>
+                            <div class="col-12 mb-30">
+                                <input type="text" placeholder="Type your username or email address" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                <div *ngIf="submitted && f.email.errors" class="validaterform">
+                                    <div *ngIf="f.email.errors.required">Veuillez entrer un email.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-20">
+                                <input type="password" placeholder="Enter your passward" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                                <div *ngIf="submitted && f.password.errors" class="validaterform">
+                                    <div *ngIf="f.password.errors.required">Veuillez entrer un mot de passe.</div>
+                                </div>
+                            </div>
                             <div class="col-12 mb-15">
                                 
                                 <input type="checkbox" id="remember_me">
