@@ -16,6 +16,17 @@ import { ProviderslistComponent } from './dashbordadmin/providerslist/providersl
 import { OrderComponent } from './frontTemplate/order/order.component';
 import { AboutusComponent } from './frontTemplate/aboutus/aboutus.component';
 import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
+import { WishlistComponent } from './frontTemplate/wishlist/wishlist.component';
+import { AdressComponent } from './frontTemplate/adress/adress.component';
+import { ShippingComponent } from './frontTemplate/shipping/shipping.component';
+import { PaymentComponent } from './frontTemplate/payment/payment.component';
+import { CompletedComponent } from './frontTemplate/completed/completed.component';
+import { CommandslistComponent } from './frontTemplate/commandslist/commandslist.component';
+
+
+
+
+
 
 const routes: Routes = [
   {path:'',component:LayoutComponent,
@@ -27,6 +38,19 @@ const routes: Routes = [
        {path:'inscription',component:InscriptionComponent},
        {path:'order',component:OrderComponent},
        {path:'aboutus',component:AboutusComponent},
+       {path:'wishlist',component:WishlistComponent},
+       {path:'adress',component:AdressComponent},
+       {path:'shipping',component:ShippingComponent},
+       {path:'payment',component:PaymentComponent},
+       {path:'completed',component:CompletedComponent},
+       {path:'commandslist',component:CommandslistComponent},
+
+
+
+
+
+
+
     ]
 },
 

@@ -24,6 +24,12 @@ import { OrderComponent } from './frontTemplate/order/order.component';
 import { AboutusComponent } from './frontTemplate/aboutus/aboutus.component';
 
 import { AuthGuardService } from './services/auth-guard.service';
+import { WishlistComponent } from './frontTemplate/wishlist/wishlist.component';
+import { AdressComponent } from './frontTemplate/adress/adress.component';
+import { ShippingComponent } from './frontTemplate/shipping/shipping.component';
+import { PaymentComponent } from './frontTemplate/payment/payment.component';
+import { CompletedComponent } from './frontTemplate/completed/completed.component';
+import { CommandslistComponent } from './frontTemplate/commandslist/commandslist.component';
 
 
 @NgModule({
@@ -45,6 +51,12 @@ import { AuthGuardService } from './services/auth-guard.service';
     ProviderslistComponent,
     OrderComponent,
     AboutusComponent,
+    WishlistComponent,
+    AdressComponent,
+    ShippingComponent,
+    PaymentComponent,
+    CompletedComponent,
+    CommandslistComponent,
   ],
   imports: [
     HttpClientModule,
