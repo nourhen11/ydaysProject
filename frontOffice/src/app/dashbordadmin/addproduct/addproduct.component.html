@@ -1,5 +1,5 @@
 <!-- Register Section Start -->
-<div class="register-section section mt-30 mb-90">
+<div class="register-section section mt-90 mb-90">
     <div class="container">
       <form  class="row" [formGroup]="productForm" (ngSubmit)="onSubmit()">
       
@@ -10,12 +10,11 @@
                     
                     <h3>Ajout de produit </h3>                    
                     <!-- Register Form -->
-                  
                         <div class="row">
                             <div class="col-12 mb-30 ">
                               <input type="text" placeholder="Référence du produit" formControlName="reference">
                               <div *ngIf="submitted && f.reference.errors" class="validaterform">
-                                <div *ngIf="f.reference.errors.required">Veuillez entrer reference.</div>
+                                <div *ngIf="f.reference.errors.required" class="col-12 mb-30 ">Veuillez entrer reference.</div>
                             </div>
                             </div>
                             
@@ -59,7 +58,7 @@
                                     </div>
                                   
                         </div>
-                   
+                      
                     
                 </div>
             </div>

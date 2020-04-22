@@ -21,9 +21,8 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let product of products">
-                            <td>1</td>
-                            <td>{{product.images}}
-                            </td>
+                            <td></td>
+                        <td><img src="http://localhost:3000/image/{{product.images[0]}}" alt="Thumbnail Image" height="42" width="42">                          </td>
                             <td>{{product.title}} </td>
                             <td>id{{product.reference}} </td>
                             <td>{{product.color}}</td>

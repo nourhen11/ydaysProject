@@ -13,6 +13,7 @@
               <th>Numéro de Téléphone
               </th>
               <th>Addresse                </th>
+              <th> Action </th>
             </tr>
           </thead>
           <tbody>
@@ -21,6 +22,9 @@
               <td>{{provider.company}}</td>
               <td>{{provider.phone}}</td>
               <td>{{provider.address}}</td>
+              <td> <button (click)="ondelete(provider._id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+                 <i  style="margin-left: 10px;" class="glyphicon glyphicon-pencil"></i>
+              </td>
             </tr>
                 </tbody>
         </table>

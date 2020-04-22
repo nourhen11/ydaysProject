@@ -26,6 +26,6 @@ router.get('/providers',Index.getProviders)
 router.get('/products/:id',Index.getProductById)
 router.get('/image/:name', upload.single('user_image'),async (req, res) => {
     console.log(__dirname)
-    res.sendFile('C:\\Users\\nourh\\Documents\\GitHub\\ydaysProject\\backOffice\\uploads\\' + req.params.name)
+    res.sendFile('C:\\wamp64\\www\\hi\\ydaysProject\\backOffice\\uploads\\' + req.params.name)
   })
 module.exports = router;

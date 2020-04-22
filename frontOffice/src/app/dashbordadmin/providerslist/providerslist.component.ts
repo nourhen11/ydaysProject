@@ -18,5 +18,11 @@ providers: any;
       this.providers = data
     })
   }
-
+  ondelete(id){
+    console.log(id)
+    this.providerService.deleteProvider(id).subscribe(data=>{
+     console.log(data)
+     
+    })
+  }
 }
