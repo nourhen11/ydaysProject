@@ -73,6 +73,12 @@ const getProviderss =(req,res,next)=>{
     Provider.find((err,result) => {
         res.status(200).json(result)
     }) }
+    const deleteProvider=(req,res,next)=>{
+        Provider.deleteOne({_id:req.params.id},(err,result)=>{
+            res.send(result)
+        })
+    }
+
 module.exports = {
  
     register,
@@ -80,4 +86,5 @@ module.exports = {
     addProduct,
     getProviderById,
     getProviderss,
+    deleteProvider,
 }
