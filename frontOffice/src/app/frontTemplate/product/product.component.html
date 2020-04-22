@@ -30,15 +30,18 @@
     </div>
 </div><!-- Page Banner Section End -->
 
+
 <!-- Single Product Section Start -->
 <div class="product-section section mt-120 mb-10">
     <div class="container">
-        
         <div class="row">
+            
             <div class="col-xl-9 col-lg-8 col-12 order-1 order-lg-2 mb-60">
-        
+                <div class="alert alert-success col-md-12" role="alert" *ngIf="successAlert">
+                    le produit est ajouté à votre panier
+                  </div>
                 <div class="row mb-40">
-
+                    
                     <div class="col-lg-6 col-12 mb-50">
 
                         <!-- Image -->
@@ -46,16 +49,16 @@
 
                             <div class="tab-content">
                                 <div id="single-image-1" class="tab-pane fade show active big-image-slider">
-                                    <div class="big-image"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Big Image"><a href="assets/images/single-product/big-1.png" class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
+                                    <div class="big-image"><img [src]="imgsrc" alt="Big Image"><a href="assets/images/single-product/big-1.png" class="big-image-popup"><i class="fa fa-search-plus"></i></a></div>
                                    
                                 </div>
                               
                             </div>
 
                             <div class="thumb-image-slider nav">
-                                <a class="thumb-image active" data-toggle="tab" href="#single-image-1"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
-                                <a class="thumb-image" data-toggle="tab" href="#single-image-2"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
-                                <a class="thumb-image" data-toggle="tab" href="#single-image-3"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
+                                <a class="thumb-image active" data-toggle="tab" href="#single-image-1" (click)="changeUrl(product.images[0])"><img src="http://localhost:3000/image/{{product.images[0]}}" alt="Thumbnail Image"></a>
+                                <a class="thumb-image" data-toggle="tab" href="#single-image-2" (click)="changeUrl(product.images[1])"><img src="http://localhost:3000/image/{{product.images[1]}}" alt="Thumbnail Image"></a>
+                                <a class="thumb-image" data-toggle="tab" href="#single-image-3" (click)="changeUrl(product.images[2])"><img src="http://localhost:3000/image/{{product.images[2]}}" alt="Thumbnail Image"></a>
                             </div>
 
                         </div>
@@ -97,9 +100,9 @@
 
                                     <div class="quantity">
                                         <h5>Quantité:</h5>
-                                        <div class="pro-qty"><input type="text" value="{{product.quantity}}"></div>
+                                        <div class="pro-qty"><input type="text" value="1"></div>
                                     </div>                            
-
+                                    <br><br>
                                     <div class="colors">
                                         <h5>Couleur:</h5>
                                         <div class="color-options">
@@ -112,9 +115,9 @@
                                 </div> 
 
 
-                                <div class="actions">
+                                <div class="actions" style="margin-top: 50px;">
 
-                                    <a href="#" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ADD TO CART</span></a>
+                                    <a (click)="addToCart()" class="add-to-cart"><i class="ti-shopping-cart"></i><span>+ panier</span></a>
 
                                     <div class="wishlist-compare">
                                         <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -147,6 +150,7 @@
 
                                 <div class="row">
                                     <div class="single-product-description-content col-lg-8 col-12">
+                                        {{product.description}}
                                         
                                     </div>
                                     

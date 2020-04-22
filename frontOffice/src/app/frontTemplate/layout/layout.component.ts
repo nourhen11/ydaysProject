@@ -10,6 +10,9 @@ import{ ProductService} from '../../services/product.service'
 export class LayoutComponent implements OnInit {
   isLogged = (localStorage.getItem('access_role') ? true : false)
   categories:any
+  cartClick=false
+  panier = JSON.parse(localStorage.getItem('product'))
+  nbrproduct:0
   constructor(private router:Router, private productservice:ProductService) { }
 
   ngOnInit(): void {
@@ -17,6 +20,8 @@ export class LayoutComponent implements OnInit {
     this.productservice.getCategories().subscribe(data=>{
       this.categories=data
     })
+    console.log(this.panier)
+    this.nbrproduct=this.panier.length
   }
   logout(){
     console.log('logout')
@@ -24,5 +29,15 @@ export class LayoutComponent implements OnInit {
     localStorage.removeItem('access_role')
     this.router.navigateByUrl('/')
   }
-
+  openCart(){
+    console.log('ok');
+    this.cartClick = true
+  }
+  closeCart(){
+    console.log('ko');
+    this.cartClick = false
+  }
+  delteFromCart(product){
+    console.log("ggg")
+  }
 }

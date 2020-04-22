@@ -11,6 +11,7 @@ const register = (req,res,next) => {
         if(err){  res.status(500).send(err)}
        return  res.status(200).json({message:"succefly added"})
     })
+   
 }
 
 const login = (req,res,next) => {
