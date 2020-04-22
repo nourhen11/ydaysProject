@@ -1,0 +1,105 @@
+<div class="container padding-bottom-3x mb-2">
+    <div class="row">
+      <!-- Checkout Adress-->
+      <div class="col-xl-9 col-lg-8">
+        <div class="checkout-steps"><a href="wishlist">4. Revue de commande</a><a class="active" href="payment"><span class="angle"></span>3. Paiement</a><a class="completed" href="shipping"><span class="angle"></span>2. Livraison</a><a class="completed" href="adress"><span class="angle"></span>1. Adresse</a></div>
+        <h4>Choisissez votre mode de paiement</h4>
+        <hr class="padding-bottom-1x">
+        <div class="accordion" id="accordion" role="tablist">
+          <div class="card">
+            <div class="card-header" role="tab">
+              <h6><a href="#card" data-toggle="collapse">Payez avec votre carte de crédit</a></h6>
+            </div>
+            <div class="collapse show" id="card" data-parent="#accordion" role="tabpanel">
+              <div class="card-body">
+                <p>Nous acceptons tous ces types de cartes:&nbsp;<img class="d-inline-block align-middle" src="assets/images/credit-cards.png" style="width: 120px;" alt="Cerdit Cards"></p>
+                <div class="card-wrapper"></div>
+                <form class="interactive-credit-card row">
+                  <p>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="d-inline-block align-middle" src="assets/images/carte.png" style="width: 400px;" alt="Cerdit Cards"></p>
+
+                  <div class="form-group col-sm-6">
+                    <input class="form-control" type="text" name="number" placeholder="Numéro de carte" required>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <input class="form-control" type="text" name="name" placeholder="Nom sur carte" required>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <input class="form-control" type="text" name="Date d'expiration" placeholder="MM/AA" required>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <input class="form-control" type="text" name="cvc" placeholder="CVC" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <button class="btn btn-outline-primary btn-block margin-top-none" type="submit">Valider</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" role="tab">
+              <h6><a class="collapsed" href="#paypal" data-toggle="collapse">Payer avec Paypal</a></h6>
+            </div>
+            <div class="collapse" id="paypal" data-parent="#accordion" role="tabpanel">
+              <div class="card-body">
+                <p>PayPal - le plus sécurisé et le plus simple</p>
+                <form class="row" method="post">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input class="form-control" type="email" placeholder="E-mail" required>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input class="form-control" type="password" placeholder="Mot de passe" required>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center"><a class="navi-link" href="#">Mot de passe oublié?</a>
+                      <button class="btn btn-outline-primary margin-top-none" type="submit">Se connecter</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="checkout-footer margin-top-1x">
+          <div class="column"><a class="btn btn-outline-secondary" href="shipping"><span class="hidden-xs-down">&nbsp;Précédent</span></a></div>
+          <div class="column"><a class="btn btn-primary" href="wishlist"><span class="hidden-xs-down">Continuez&nbsp;</span></a></div>
+        </div>
+      </div>
+      <!-- Sidebar          -->
+      <div class="col-xl-3 col-lg-4">
+        <aside class="sidebar">
+          <div class="padding-top-2x hidden-lg-up"></div>
+          <!-- Order Summary Widget-->
+          <section class="widget widget-order-summary">
+            <h3 class="widget-title">Panier</h3>
+            <table class="table">
+              <tr>
+                <td>Prix des achats:</td>
+                <td class="text-medium">€ 289.00</td>
+              </tr>
+              <tr>
+                <td>Frais de Livraison :</td>
+                <td class="text-medium">€ 0.00</td>
+              </tr>
+              <tr>
+                <td>TVA</td>
+                <td class="text-medium">€ 9.00</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="text-lg text-medium">€ 298</td>
+              </tr>
+      </table>
+    </section>
+          <!-- Featured Products Widget-->
+     
+          <!-- Promo Banner-->
+        </aside>
+      </div>
+    </div>
+  </div>

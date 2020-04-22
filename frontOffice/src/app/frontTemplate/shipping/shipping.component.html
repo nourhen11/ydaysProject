@@ -1,0 +1,93 @@
+<div class="container padding-bottom-3x mb-2">
+    <div class="row">
+      <!-- Checkout Adress-->
+      <div class="col-xl-9 col-lg-8">
+        <div class="checkout-steps"><a href="wishlist">4. Revue de commande</a><a href="payment"><span class="angle"></span>3. Paiement</a><a class="active" href="shipping"><span class="angle"></span>2. Livraison</a><a class="completed" href="adress"><span class="angle"></span>1. Adresse</a></div>
+        <h4>Choisissez votre mode de livraison</h4>
+        <hr class="padding-bottom-1x">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="thead-default">
+              <tr>
+                <th></th>
+                <th>Mode de livraison</th>
+                <th>Délais de livraison</th>
+                <th>Frais</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <div class="custom-control custom-radio mb-0">
+                    <input class="custom-control-input" type="radio" id="courier" name="shipping-method" checked>
+                    <label class="custom-control-label" for="courier"></label>
+                  </div>
+                </td>
+                <td class="align-middle"><span class="text-medium">Livraison en relais</span><br><span class="text-muted text-sm">Dépôt en bureau de Poste le plus proche de votre adresse</span></td>
+                <td class="align-middle">2 - 3 jours</td>
+                <td class="align-middle">$10.00</td>
+              </tr>
+              <tr>
+                <td class="align-middle">
+                  <div class="custom-control custom-radio mb-0">
+                    <input class="custom-control-input" type="radio" id="local" name="shipping-method">
+                    <label class="custom-control-label" for="local"></label>
+                  </div>
+                </td>
+                <td class="align-middle"><span class="text-medium">Livraison à domicile</span><br><span class="text-muted text-sm">Toutes les adresses</span></td>
+                <td class="align-middle">4 - 5 jours</td>
+                <td class="align-middle">$15.00</td>
+              </tr>
+        
+              <tr>
+                <td class="align-middle">
+                  <div class="custom-control custom-radio mb-0">
+                    <input class="custom-control-input" type="radio" id="pickup" name="shipping-method">
+                    <label class="custom-control-label" for="pickup"></label>
+                  </div>
+                </td>
+                <td class="align-middle"><span class="text-medium">Récupération au store</span><br><span class="text-muted text-sm">Les infos vous seront envoyés par email</span></td>
+                <td class="align-middle">1 jour</td>
+                <td class="align-middle">$0.00</td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+        <div class="checkout-footer margin-top-1x">
+          <div class="column"><a class="btn btn-outline-secondary" href="adress"><span class="hidden-xs-down">&nbsp;Précédent</span></a></div>
+          <div class="column"><a class="btn btn-primary" href="payment"><span class="hidden-xs-down">Continuez&nbsp;</span></a></div>
+        </div>
+      </div>
+      <!-- Sidebar          -->
+      <div class="col-xl-3 col-lg-4">
+        <aside class="sidebar">
+          <div class="padding-top-2x hidden-lg-up"></div>
+          <!-- Order Summary Widget-->
+          <section class="widget widget-order-summary">
+            <h3 class="widget-title">Order Summary</h3>
+            <table class="table">
+                    <tr>
+                      <td>Prix des achats:</td>
+                      <td class="text-medium">€ 289.00</td>
+                    </tr>
+                    <tr>
+                      <td>Frais de Livraison :</td>
+                      <td class="text-medium">€ 0.00</td>
+                    </tr>
+                    <tr>
+                      <td>TVA</td>
+                      <td class="text-medium">€ 9.00</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td class="text-lg text-medium">€ 298</td>
+                    </tr>
+            </table>
+          </section>
+          <!-- Featured Products Widget-->
+
+        </aside>
+      </div>
+    </div>
+  </div>
