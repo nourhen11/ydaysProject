@@ -124,10 +124,13 @@
     <!-- Mini Cart Bottom -->
     <div class="mini-cart-bottom"  *ngFor="let cart of panier" >    
     
-        <h4 class="sub-total">Total: <span>€ {{cart.price}}</span></h4>
 
-        <div class="button" >
-            <a routerLink="/order">Vérifier</a>
+        <h4 class="sub-total">Total: <span>{{total}}$</span></h4>
+
+        <div class="button">
+            <a (click)="getOrder()">VérifierT</a>
+
+
         </div>
         
     </div>

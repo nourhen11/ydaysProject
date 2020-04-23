@@ -109,8 +109,10 @@
                                     <td class="pro-title"><a href="#">{{product.title}}</a></td>
                                     <td class="pro-price"><span>€{{product.price}}</span></td>
                                     <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
-                                    <td class="pro-subtotal"><span>€{{product.price}}</span></td>
-                                    <td class="pro-remove"><a href="#"><span>&#x274c;</span></a></td>
+
+                                    <td class="pro-subtotal"><span>${{product.price}}</span></td>
+                                    <td class="pro-remove" (click)="removeProduct(product)"><a><span>&#x274c;</span></a></td>
+
                                 </tr>
                               
                             </tbody>
@@ -134,7 +136,10 @@
                                 <p>Frais de livraison <span>€ 00.00</span></p>
                                 <h2>Grand Total <span>€ {{total}}.00</span></h2>
                             </div>
-                                <div class="column"><a class="btn btn-primary" href="adress"><span class="hidden-xs-down">payer</span></a></div>
+
+                            <div class="cart-summary-button">
+                                <button class="checkout-btn"><a routerLink="/adress">Valider</a></button>
+
                             </div>
                         
                     </div>

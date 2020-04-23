@@ -22,7 +22,7 @@ import { ShippingComponent } from './frontTemplate/shipping/shipping.component';
 import { PaymentComponent } from './frontTemplate/payment/payment.component';
 import { CompletedComponent } from './frontTemplate/completed/completed.component';
 import { CommandslistComponent } from './frontTemplate/commandslist/commandslist.component';
-
+import { FilterComponent } from './frontTemplate/filter/filter.component';
 
 
 
@@ -44,12 +44,7 @@ const routes: Routes = [
        {path:'payment',component:PaymentComponent},
        {path:'completed',component:CompletedComponent},
        {path:'commandslist',component:CommandslistComponent},
-
-
-
-
-
-
+       {path:'filter/:id_category',component:FilterComponent}
 
     ]
 },

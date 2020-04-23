@@ -14,5 +14,15 @@ export class OrderComponent implements OnInit {
     this.panier.forEach(element =>this.total= this.total +element.price);
     console.log(this.total)
   }
+  removeProduct(product){
+    for(let index = 0; index < this.panier.length; index++)
+    {
+        if(this.panier[index].title == product.title)
+        {
+            this.panier.splice(index, 1);
+            localStorage.setItem('product', JSON.stringify(this.panier))
+        }
+    }
+  }
 
 }

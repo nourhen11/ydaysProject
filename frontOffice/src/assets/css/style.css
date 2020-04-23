@@ -3505,7 +3505,10 @@ img.mfp-img {
 
 /*-- Mini Cart Wrap --*/
 .mini-cart-wrap {
+
+=======
   background-color: #EEF7FB;
+
   width: 320px;
   position: fixed;
   top: 0;
@@ -3582,7 +3585,9 @@ img.mfp-img {
     bottom: 0;
     left: 0;
     width: 100%;
+
     background-color: #EEF7FB; }
+
     .mini-cart-wrap .mini-cart-bottom .sub-total {
       font-size: 16px;
       font-weight: 600;
@@ -3605,6 +3610,7 @@ img.mfp-img {
         line-height: 30px;
         padding: 5px 30px;
         border-radius: 50px;
+
         background-color: #95a7ff;
         width: 100%;
         text-align: center;
@@ -3628,6 +3634,7 @@ img.mfp-img {
           opacity: 0;
           z-index: -1; }
         .mini-cart-wrap .mini-cart-bottom .button a:hover {
+
           color: #95a7ff; }
           .mini-cart-wrap .mini-cart-bottom .button a:hover::before {
             height: 550%;
