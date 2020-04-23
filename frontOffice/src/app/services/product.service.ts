@@ -21,6 +21,11 @@ export class ProductService {
 getProviders(){ 
   return this.http.get('http://localhost:3000/providers');
 }
-
+getProductsByCategory(id){
+  return this.http.get('http://localhost:3000/products/category/'+id)
+}
+getSubcategories(id_category){
+  return this.http.get('http://localhost:3000/subcategories/'+id_category)
+}
 }
 

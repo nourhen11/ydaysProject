@@ -85,6 +85,13 @@ const getProviders = (req,res,next) => {
     res.status(200).send(result)
   })
 }
+const getProductsByCategory =(req,res,next)=>{
+  console.log(req.params.id_category)
+  Product.find({category:req.params.id_category},(err,result)=>{
+    res.status(200).send(result)
+  })
+
+}
 module.exports = {
     login,
     register,
@@ -94,6 +101,7 @@ module.exports = {
     getProductById,
     getCategories,
     getProviders,
-    getSubcategories
+    getSubcategories,
+    getProductsByCategory
 
 } 

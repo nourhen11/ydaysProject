@@ -20,6 +20,7 @@ router.post('/register',Index.register)
 router.post('/login',Index.login)
 
 router.get('/products',Index.getProducts)
+router.get('/products/category/:id_category',Index.getProductsByCategory)
 router.get('/categories',Index.getCategories)
 router.get('/subcategories/:id',Index.getSubcategories)
 router.get('/providers',Index.getProviders)

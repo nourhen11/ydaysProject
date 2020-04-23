@@ -3,7 +3,7 @@
     <h4 class="title">CATEGORIES</h4>
     
     <ul class="sidebar-category">
-        <li *ngFor="let category of categories"><a href="#">{{category.name}}</a></li>
+        <li *ngFor="let category of categories"><a routerLink="/filter/{{category._id}}">{{category.name}}</a></li>
     </ul>
     
 </div>

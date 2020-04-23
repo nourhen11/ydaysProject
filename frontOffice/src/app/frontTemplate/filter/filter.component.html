@@ -1,0 +1,141 @@
+<!-- Mini Cart Wrap Start -->                      
+<!-- Mini Cart Wrap End --> 
+
+<!-- Cart Overlay -->
+<div class="cart-overlay"></div>
+
+<!-- Page Banner Section Start -->
+<div class="page-banner-section section">
+    <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+
+        <!-- Page Banner -->
+        <div class="col-lg-4 col-12 order-lg-2 d-flex align-items-center justify-content-center">
+            <div class="page-banner">
+                <h1>Liste des produits</h1>
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">Page d'Acceuil</a></li>
+                        <li><a href="#">Liste des produits</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner -->
+        <div class="col-lg-4 col-md-6 col-12 order-lg-1">
+            <div class="banner"><a href="#"><img src="assets/images/banner/bannerlogo.png" alt="Banner"></a></div>
+        </div>
+
+        <!-- Banner -->
+        <div class="col-lg-4 col-md-6 col-12 order-lg-3">
+            <div class="banner"><a href="#"><img src="assets/images/banner/bannerlogo2.png" alt="Banner"></a></div>
+        </div>
+
+    </div>
+</div><!-- Page Banner Section End -->
+
+<!-- Feature Product Section Start -->
+<div class="product-section section mt-90 mb-40">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-xl-9 col-lg-8 col-12 order-lg-2 mb-50">
+                
+                <div class="row mb-50">
+                    <div class="col">
+                       
+                        <ul class="nav product-tab-list">
+                            <li><a href="#tab-three">TOUT</a></li>
+                            <li *ngFor="let subcategory of subcategories"><a href="#tab-four">{{subcategory.name}}</a></li>
+                          
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+                <!-- Shop Product Wrap Start -->
+                <div class="shop-product-wrap grid with-sidebar row">
+                    
+                    <div class="col-xl-4 col-md-6 col-12 pb-30 pt-10" *ngFor="let product of products">                      
+                        <!-- Product Start -->
+                        <div class="ee-product">
+
+                            <!-- Image -->
+                            <div class="image">
+
+                                <a href="single-product.html" class="img"><img src="http://localhost:3000/image/{{product.images[0]}}" alt="Product Image"></a>
+
+                                <div class="wishlist-compare">
+                                    <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
+                                    <a href="#" data-tooltip="Wishlist"><i class="ti-heart"></i></a>
+                                </div>
+
+                                <a routerLink="/product/{{product._id}}" class="add-to-cart"><i class="ti-shopping-cart"></i><span>ADD TO CART</span></a>
+
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+
+                                <!-- Category & Title -->
+                                <div class="category-title">
+
+                                    <a href="#" class="cat">{{product.category.name}}</a>
+                                    <h5 class="title"><a href="single-product.html">{{product.title}}</a></h5>
+
+                                </div>
+
+                                <!-- Price & Ratting -->
+                                <div class="price-ratting">
+
+                                    <h5 class="price">{{product.price}}</h5>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div><!-- Product End -->                       
+                    </div>
+
+                  
+                </div><!-- Shop Product Wrap End -->
+                
+                
+                <div class="row mt-30">
+                    <div class="col">
+
+                        <ul class="pagination">
+                            <li><a href="#">Précédent</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li> - - - - - </li>
+                            <li><a href="#">18</a></li>
+                            <li><a href="#">18</a></li>
+                            <li><a href="#">20</a></li>
+                            <li><a href="#">suivant</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="shop-sidebar-wrap col-xl-3 col-lg-4 col-12 order-lg-1 mb-15">
+                
+               <app-sidebar></app-sidebar>
+            </div>
+            
+        </div>
+    </div>
+</div><!-- Feature Product Section End -->
+
+
+

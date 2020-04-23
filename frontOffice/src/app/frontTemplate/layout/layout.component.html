@@ -124,10 +124,10 @@
     <!-- Mini Cart Bottom -->
     <div class="mini-cart-bottom">    
     
-        <h4 class="sub-total">Total: <span>$1160</span></h4>
+        <h4 class="sub-total">Total: <span>{{total}}$</span></h4>
 
         <div class="button">
-            <a routerLink="/order">VérifierT</a>
+            <a (click)="getOrder()">VérifierT</a>
         </div>
         
     </div>

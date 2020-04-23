@@ -13,15 +13,19 @@ export class LayoutComponent implements OnInit {
   cartClick=false
   panier = JSON.parse(localStorage.getItem('product'))
   nbrproduct:0
+  total =0
   constructor(private router:Router, private productservice:ProductService) { }
 
   ngOnInit(): void {
     console.log(this.isLogged)
     this.productservice.getCategories().subscribe(data=>{
       this.categories=data
+      //console.log(this.categories)
     })
     console.log(this.panier)
     this.nbrproduct=this.panier.length
+    this.panier.forEach(element =>this.total= this.total +element.price);
+
   }
   logout(){
     console.log('logout')
@@ -38,6 +42,21 @@ export class LayoutComponent implements OnInit {
     this.cartClick = false
   }
   delteFromCart(product){
-    console.log("ggg")
+    for(let index = 0; index < this.panier.length; index++)
+    {
+        if(this.panier[index].title == product.title)
+        {
+            this.panier.splice(index, 1);
+
+            console.log(this.panier)
+            localStorage.setItem('product', JSON.stringify(this.panier))
+
+        }
+    }
+
+  }
+  getOrder(){
+    this.cartClick=false
+    this.router.navigateByUrl('/order')
   }
 }
