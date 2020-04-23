@@ -2159,7 +2159,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   background-color: #f6f7f8; }
 
 .bg-ivory {
-  background-color: #fefcef; }
+  background-color: #EEF7FB; }
 
 img.mfp-img {
   background-color: #f6f7f8;
@@ -2440,7 +2440,7 @@ img.mfp-img {
     - Page Banner Section
 ------------------------------------------*/
 .page-banner-section {
-  background-color: #fefcef; }
+  background-color: #EEF7FB; }
 
 /*-- Page Banner Wrap --*/
 @media only screen and (max-width: 767px) {
@@ -2459,7 +2459,7 @@ img.mfp-img {
 
 /*-- Page Banner --*/
 .page-banner {
-  background-color: #fefcef;
+  background-color: #EEF7FB;
   padding: 30px;
   text-align: center; }
   @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -2585,14 +2585,14 @@ img.mfp-img {
     opacity: 0;
     z-index: -1; }
   .btn:hover {
-    color: #f5d730; }
+    color: #0E0C28; }
     .btn:hover::before {
       height: 300%;
       opacity: 1; }
   .btn.hover-theme::before {
-    background-color: #f5d730; }
+    background-color: #0E0C28; }
   .btn.hover-theme:hover {
-    border-color: #f5d730;
+    border-color: #0E0C28;
     color: #202020; }
     .btn.hover-theme:hover::before {
       height: 300%;
@@ -2611,7 +2611,7 @@ img.mfp-img {
     .btn.btn-text::before {
       display: none; }
     .btn.btn-text.hover-theme:hover {
-      color: #f5d730; }
+      color: #0E0C28; }
   .btn.btn-underline {
     text-decoration: underline; }
   .btn.btn-large {
@@ -2712,7 +2712,7 @@ img.mfp-img {
   border: none;
   width: 40px;
   height: 40px;
-  background-color: #f5d730;
+  background-color: #0E0C28;
   color: #202020;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
@@ -3505,7 +3505,7 @@ img.mfp-img {
 
 /*-- Mini Cart Wrap --*/
 .mini-cart-wrap {
-  background-color: #fefcef;
+  background-color: #EEF7FB;
   width: 320px;
   position: fixed;
   top: 0;
@@ -3582,7 +3582,7 @@ img.mfp-img {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #fefcef; }
+    background-color: #EEF7FB; }
     .mini-cart-wrap .mini-cart-bottom .sub-total {
       font-size: 16px;
       font-weight: 600;
@@ -3605,7 +3605,7 @@ img.mfp-img {
         line-height: 30px;
         padding: 5px 30px;
         border-radius: 50px;
-        background-color: #f5d730;
+        background-color: #95a7ff;
         width: 100%;
         text-align: center;
         overflow: hidden;
@@ -3628,7 +3628,7 @@ img.mfp-img {
           opacity: 0;
           z-index: -1; }
         .mini-cart-wrap .mini-cart-bottom .button a:hover {
-          color: #f5d730; }
+          color: #95a7ff; }
           .mini-cart-wrap .mini-cart-bottom .button a:hover::before {
             height: 550%;
             opacity: 1; }
@@ -4840,7 +4840,7 @@ img.mfp-img {
 /*-- Hero Item --*/
 .hero-item {
   padding: 85px 150px 60px 100px;
-  background-color: #fefcef; }
+  background-color: #EEF7FB; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .hero-item {
       padding: 85px 100px 60px 100px; } }
@@ -6757,7 +6757,7 @@ img.mfp-img {
   float: left;
   width: 100%;
   padding: 13px 30px;
-  background-color: #fefcef; }
+  background-color: #EEF7FB; }
   @media only screen and (max-width: 479px) {
     .shop-top-bar {
       padding: 13px 20px; } }
@@ -8670,7 +8670,7 @@ img.mfp-img {
 
 /*-- Single Product Tab Conent --*/
 .single-product-tab-content {
-  background-color: #fefcef; }
+  background-color: #EEF7FB; }
 
 /*-- Single Product Description Content --*/
 .single-product-description-content {
@@ -9023,7 +9023,7 @@ img.mfp-img {
 .shop-sidebar {
   background-color: #f6f7f8; }
   .shop-sidebar .title {
-    background-color: #fefcef;
+    background-color: #EEF7FB;
     font-size: 18px;
     font-weight: 700;
     line-height: 30px;
@@ -9162,13 +9162,13 @@ img.mfp-img {
 -----------------------------------------*/
 /*-- Cart Table --*/
 .cart-table .table {
-  border-bottom: 8px solid #fefcef;
+  border-bottom: 8px solid #EEF7FB;
   margin: 0; }
   @media only screen and (max-width: 767px) {
     .cart-table .table {
-      border-top: 8px solid #fefcef; } }
+      border-top: 8px solid #EEF7FB; } }
   .cart-table .table thead {
-    background-color: #fefcef; }
+    background-color: #EEF7FB; }
     @media only screen and (max-width: 767px) {
       .cart-table .table thead {
         display: none; } }
@@ -9365,7 +9365,7 @@ img.mfp-img {
     .cart-summary {
       margin-left: 0; } }
   .cart-summary .cart-summary-wrap {
-    background-color: #fefcef;
+    background-color: #EEF7FB;
     padding: 45px 50px;
     margin-bottom: 20px; }
     @media only screen and (max-width: 479px) {
@@ -9678,7 +9678,7 @@ img.mfp-img {
 
 /*-- Checkout Cart Total --*/
 .checkout-cart-total {
-  background-color: #fefcef;
+  background-color: #EEF7FB;
   padding: 45px; }
   @media only screen and (max-width: 479px) {
     .checkout-cart-total {
@@ -9722,7 +9722,7 @@ img.mfp-img {
 
 /*-- Checkout Payment Method --*/
 .checkout-payment-method {
-  background-color: #fefcef;
+  background-color: #EEF7FB;
   padding: 45px; }
   @media only screen and (max-width: 479px) {
     .checkout-payment-method {
@@ -10301,7 +10301,7 @@ img.mfp-img {
 .blog-sidebar {
   background-color: #f6f7f8; }
   .blog-sidebar .title {
-    background-color: #fefcef;
+    background-color: #EEF7FB;
     font-size: 18px;
     font-weight: 700;
     line-height: 30px;
@@ -10429,7 +10429,7 @@ img.mfp-img {
       padding: 10px 15px;
       width: 150px;
       text-align: center;
-      background-color: #f5d730;
+      background-color: rgb(25, 186, 255);
       border: none;
       color: #202020;
       text-transform: uppercase;
@@ -10494,7 +10494,7 @@ img.mfp-img {
   .ee-login h4 a {
     text-transform: uppercase;
     font-weight: 700;
-    color: #f5d730; }
+    color: #3557ff; }
     .ee-login h4 a:hover {
       text-decoration: underline; }
 
@@ -10503,7 +10503,7 @@ img.mfp-img {
   height: 340px;
   width: 1px;
   margin: auto;
-  background-color: #0E0C28;
+  background-color: #0022cc;
   position: relative; }
   @media only screen and (max-width: 767px) {
     .login-reg-vertical-boder {
@@ -11279,7 +11279,7 @@ img.mfp-img {
     content: "";
     width: 380px;
     height: 360px;
-    background-color: #fefcef;
+    background-color: #EEF7FB;
     z-index: -1; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .feature-image::before {
@@ -11469,7 +11469,7 @@ img.mfp-img {
 
 /*-- Testimonial Content Two --*/
 .ee-testimonial-content-2 {
-  background-color: #fefcef;
+  background-color: #EEF7FB;
   overflow: hidden;
   padding: 40px 50px 40px 85px;
   margin-left: -50px; }

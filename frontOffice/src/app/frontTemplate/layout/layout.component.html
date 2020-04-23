@@ -103,7 +103,7 @@
     <!-- Mini Cart Top -->
     <div class="mini-cart-top">    
     
-        <button class="close-cart">Close Cart<i class="icofont icofont-close" (click)="closeCart()"></i></button>
+        <button class="close-cart">Fermer le panier<i class="icofont icofont-close" (click)="closeCart()"></i></button>
         
     </div>
 
@@ -113,8 +113,8 @@
             <a class="image"><img src='http://localhost:3000/image/{{cart.image}}' alt="Product"></a>
             <div class="content">
                 <a href="" class="title">{{cart.title}}</a>
-                <span class="price">Price: ${{cart.price}}</span>
-                <span class="qty">Qty: 01</span>
+                <span class="price">Prix: € {{cart.price}}</span>
+                <span class="qty">Qté: 01</span>
             </div>
             <button class="remove"><i class="icofont icofont-delete" (click)="delteFromCart(cart)"></i></button>
         </li>
@@ -122,12 +122,12 @@
     </ul>
 
     <!-- Mini Cart Bottom -->
-    <div class="mini-cart-bottom">    
+    <div class="mini-cart-bottom"  *ngFor="let cart of panier" >    
     
-        <h4 class="sub-total">Total: <span>$1160</span></h4>
+        <h4 class="sub-total">Total: <span>€ {{cart.price}}</span></h4>
 
-        <div class="button">
-            <a routerLink="/order">VérifierT</a>
+        <div class="button" >
+            <a routerLink="/order">Vérifier</a>
         </div>
         
     </div>

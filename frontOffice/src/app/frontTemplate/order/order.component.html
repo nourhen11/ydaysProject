@@ -73,12 +73,12 @@
 
         <!-- Banner -->
         <div class="col-lg-4 col-md-6 col-12 order-lg-1">
-            <div class="banner"><a href="#"><img src="assets/images/banner/bannerlogo.png" alt="Banner"></a></div>
+            <div class="banner"><a href="#"><img src="assets/images/9.png" alt="Banner"></a></div>
         </div>
 
         <!-- Banner -->
         <div class="col-lg-4 col-md-6 col-12 order-lg-3">
-            <div class="banner"><a href="#"><img src="assets/images/banner/bannerlogo2.png" alt="Banner"></a></div>
+            <div class="banner"><a href="#"><img src="assets/images/10.png" alt="Banner"></a></div>
         </div>
 
     </div>
@@ -107,9 +107,9 @@
                                 <tr *ngFor="let product of panier">
                                     <td class="pro-thumbnail"><a href="#"><img src="http://localhost:3000/image/{{product.image}}" alt="Product"></a></td>
                                     <td class="pro-title"><a href="#">{{product.title}}</a></td>
-                                    <td class="pro-price"><span>${{product.price}}</span></td>
+                                    <td class="pro-price"><span>€{{product.price}}</span></td>
                                     <td class="pro-quantity"><div class="pro-qty"><input type="text" value="1"></div></td>
-                                    <td class="pro-subtotal"><span>${{product.price}}</span></td>
+                                    <td class="pro-subtotal"><span>€{{product.price}}</span></td>
                                     <td class="pro-remove"><a href="#"><span>&#x274c;</span></a></td>
                                 </tr>
                               
@@ -130,14 +130,13 @@
                         <div class="cart-summary">
                             <div class="cart-summary-wrap">
                                 <h4>Commande</h4>
-                                <p>Total d'achats <span>${{total}}.00</span></p>
-                                <p>Frais de livraison <span>$00.00</span></p>
-                                <h2>Grand Total <span>${{total}}.00</span></h2>
+                                <p>Total d'achats <span>€ {{total}}.00</span></p>
+                                <p>Frais de livraison <span>€ 00.00</span></p>
+                                <h2>Grand Total <span>€ {{total}}.00</span></h2>
                             </div>
-                            <div class="cart-summary-button">
-                                <button class="checkout-btn">Payer</button>
+                                <div class="column"><a class="btn btn-primary" href="adress"><span class="hidden-xs-down">payer</span></a></div>
                             </div>
-                        </div>
+                        
                     </div>
 
                 </div>
