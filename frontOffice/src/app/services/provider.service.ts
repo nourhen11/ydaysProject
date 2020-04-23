@@ -28,4 +28,7 @@ export class ProviderService {
   getProviders(){
     return this.http.get('http://localhost:3000/provider/allproviders');
   }
+  deleteProvider(id){
+    return this.http.delete('http://localhost:3000/provider/'+id)
+  }
 }
